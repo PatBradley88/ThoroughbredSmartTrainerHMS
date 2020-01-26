@@ -1,5 +1,6 @@
 <?php 
 include("includes/config.php");
+include("includes/classes/Category.php");
 
 //session_destroy(); Temp Logout Button
 
@@ -17,17 +18,17 @@ if (isset($_SESSION['userLoggedIn'])) {
 
 <head>
 
-    <meta charset="utf-8">
+   <!--  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content=""> -->
 
     <title>Thoroughbred Smart Trainer</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
+<!--     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+ -->
     <!-- Custom CSS -->
     <link href="assets/css/tst-home.css" rel="stylesheet">
 
