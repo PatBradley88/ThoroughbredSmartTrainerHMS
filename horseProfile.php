@@ -10,16 +10,23 @@ else {
     // echo "ID not set";
 }
 
-$horseQuery = mysqli_query($con, "SELECT * FROM horses WHERE horse_id = '$horseId'");
-$horse = mysqli_fetch_array($horseQuery);
+$horse = new Horse($con, $horseId);
 
-
-$category = new Category($con, $horse['category']);
-
-echo $horse['horse_name'] . "<br>";
-echo $category->getType();
-
+$category = $horse->getCategory();
 ?>
+
+<div class="entityInfo">
+
+    <div class="leftSection">
+        <img src="<?php echo $horse->getHorseImage(); ?>">
+    </div>
+    
+    <div class="rightSection">
+        <h2><?php echo $horse->getName(); ?></h2>
+        <span><?php echo $category->getType(); ?></span>
+    </div>
+
+</div>
 
 
 

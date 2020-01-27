@@ -1,6 +1,8 @@
 <?php 
 include("includes/config.php");
 include("includes/classes/Category.php");
+include("includes/classes/Horse.php");
+
 
 //session_destroy(); Temp Logout Button
 
