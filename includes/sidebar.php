@@ -2,9 +2,9 @@
 
                     <nav class="sideBar">
 
-                        <a href="index.php" class="logo">
+                        <span class="logo" onclick="openPage('index.php')">
                             <img src="assets/images/TSTWht.png">
-                        </a>
+                        </span>
 
                         <div class="group">
 
@@ -19,7 +19,7 @@
                         <div class="group">
                             
                             <div class="navItem">
-                                <a href="horseProfile.php" class="navItemLink">Horses</a>
+                                <span class="navItemLink" onclick="openPage('horseProfile.php')">Horses</span>
                             </div>
                             <div class="navItem">
                                 <a href="ownerProfile.php" class="navItemLink">Owners</a>

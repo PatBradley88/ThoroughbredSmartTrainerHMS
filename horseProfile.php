@@ -13,6 +13,7 @@ else {
 $horse = new Horse($con, $horseId);
 
 $category = $horse->getCategory();
+$owner = $horse->getOwner();
 ?>
 
 <div class="entityInfo">
@@ -23,7 +24,8 @@ $category = $horse->getCategory();
     
     <div class="rightSection">
         <h2><?php echo $horse->getName(); ?></h2>
-        <span><?php echo $category->getType(); ?></span>
+        <span><?php echo $category->getType(); ?></span><br><br>
+        <span>Owner: <?php echo $owner->getOwner(); ?></span>
     </div>
 
 </div>

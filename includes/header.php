@@ -2,13 +2,15 @@
 include("includes/config.php");
 include("includes/classes/Category.php");
 include("includes/classes/Horse.php");
+include("includes/classes/Owner.php");
+
 
 
 //session_destroy(); Temp Logout Button
 
 if (isset($_SESSION['userLoggedIn'])) {
     $userLoggedIn = $_SESSION['userLoggedIn'];
-    # code...
+    echo "<script>userLoggedIn = '$userLoggedIn';</script>";
 } else {
     header("Location: register.php");
 }
@@ -33,6 +35,9 @@ if (isset($_SESSION['userLoggedIn'])) {
  -->
     <!-- Custom CSS -->
     <link href="assets/css/tst-home.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
