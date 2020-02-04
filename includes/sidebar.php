@@ -2,16 +2,16 @@
 
                     <nav class="sideBar">
 
-                        <span class="logo" onclick="openPage('index.php')">
+                        <span role="link" tabindex="0" onclick="openPage('index.php')" class="logo">
                             <img src="assets/images/TSTWht.png">
                         </span>
 
                         <div class="group">
 
                             <div class="navItem">
-                                <a href="search.php" class="navItemLink">Search
+                                <span role="link" tabindex="0" onclick="openPage('search.php')" class="navItemLink">Search
                                     <img src="assets/images/search.png" class="icon" alt="search">
-                                </a>
+                                </span>
                             </div>
 
                         </div>
@@ -19,16 +19,16 @@
                         <div class="group">
                             
                             <div class="navItem">
-                                <span class="navItemLink" onclick="openPage('horseProfile.php')">Horses</span>
+                                <span role="link" tabindex="0" class="navItemLink" onclick="openPage('horses.php')">Horses</span>
                             </div>
                             <div class="navItem">
-                                <a href="ownerProfile.php" class="navItemLink">Owners</a>
+                                <span role="link" tabindex="0" onclick="openPage('owner.php')" class="navItemLink">Owners</span>
                             </div>
                             <div class="navItem">
-                                <a href="admin.php" class="navItemLink">Admin</a>
+                                <span role="link" tabindex="0" onclick="openPage('admin/index.php')" class="navItemLink">Admin</span>
                             </div>
                             <div class="navItem">
-                                <a href="user.php" class="navItemLink">Patrick Bradley</a>
+                                <span role="link" tabindex="0" onclick="openPage('profile.php')" class="navItemLink">Patrick Bradley</span>
                             </div>
 
                         </div>

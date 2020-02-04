@@ -1,4 +1,4 @@
-<?php include("includes/header.php"); 
+<?php include("includes/includedFiles.php");  
 
 if (isset($_GET['id'])) {
     # code...
@@ -25,7 +25,7 @@ $owner = $horse->getOwner();
     <div class="rightSection">
         <h2><?php echo $horse->getName(); ?></h2>
         <span><?php echo $category->getType(); ?></span><br><br>
-        <span>Owner: <?php echo $owner->getOwner(); ?></span>
+        <span>Owner: <?php echo $owner->getOwnerName(); ?></span>
     </div>
 
 </div>

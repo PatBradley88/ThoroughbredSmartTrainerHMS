@@ -153,7 +153,67 @@ body {
 	margin-top: 0px;
 }
 
+.ownerInfo {
+	text-align: center;
+}
 
+.ownerInfo img {
+	width: 200px;
+	min-width: 130px;
+	border-radius: 500px;
+}
+
+.button {
+	color: #fff;
+	cursor: pointer;
+	margin-bottom: 10px;
+	background-color: transparent;
+	font-weight: 500;
+	letter-spacing: 2px;
+	border: 2px solid #fff;
+	border-radius: 500px;
+	padding: 15px;
+	min-width: 130px;
+}
+
+.borderBottom {
+	border-bottom: 1px solid #939393;
+	margin-bottom: 20px;
+}
+
+.ownerContact {
+	text-align: left;
+    padding-left: 10;
+}
+
+.ownerInfoContainer h2,
+.gridViewContainer h2 {
+	text-align: center;
+}
+
+.searchContainer {
+	background-color: #242424;
+	padding: 20px 20px;
+}
+
+.searchContainer h4 {
+	margin: 0;
+	font-weight: 300;
+}
+
+.searchContainer .searchInput {
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	font-weight: 700;
+	font-size: 62px;
+	letter-spacing: 2px;
+}
+
+input:focus {
+	outline: none;
+}
 
 
 

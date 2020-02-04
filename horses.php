@@ -9,15 +9,15 @@ include("includes/includedFiles.php");
             <div class="gridViewContainer">
                 
                 <?php 
-                    $ownerQuery = mysqli_query($con, "SELECT * FROM owners");
+                    $horseQuery = mysqli_query($con, "SELECT * FROM horses");
 
-                    while($row = mysqli_fetch_array($ownerQuery)) {
+                    while($row = mysqli_fetch_array($horseQuery)) {
                         echo "<div class='gridViewItem'>
-                                <span role='link' tabindex='0' onclick='openPage(\"ownerProfile.php?id=" . $row['owner_id'] . "\")'> 
-                                <img src='" . $row['owner_colours'] . "'>
+                                <span role='link' tabindex='0' onclick='openPage(\"horseProfile.php?id=" . $row['horse_id'] . "\")'> 
+                                <img src='" . $row['horse_image'] . "'>
 
                                 <div class='gridViewInfo'>"
-                                    . $row['name'] .
+                                    . $row['horse_name'] .
                                 "</div>
                                 </span>
 
