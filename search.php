@@ -35,3 +35,74 @@ $(function() {
 
 </script>
 
+<?php if($term == "") exit(); ?>
+
+
+<div class="ownersContainer borderBottom">
+	
+	<h2>OWNERS</h2>
+
+	<?php 
+	$ownerQuery = mysqli_query($con, "SELECT owner_id FROM owners WHERE name LIKE '$term%' LIMIT 10");
+
+	if(mysqli_num_rows($ownerQuery) == 0) {
+		echo "<span class='noResults'>No owners found matching " . $term . "</span>";
+	}
+
+	while ($row = mysqli_fetch_array($ownerQuery)) {
+		$ownerFound = new Owner($con, $row['owner_id']);
+
+		echo "<div class='searchResultRow'>
+				<div class='ownerName'>
+					<span role='link' tabindex='0' onclick='openPage(\"ownerProfile.php?id=" . $ownerFound->getId() ."\")'>
+					"
+					. $ownerFound->getOwnerName() .
+					"
+					</span>
+				</div>
+				
+			</div>";
+
+	}
+
+	?>
+
+</div>
+
+<div class="gridViewContainer">
+                
+                <?php 
+                    $horseQuery = mysqli_query($con, "SELECT * FROM horses WHERE horse_name LIKE '$term%' LIMIT 10");
+
+                    if(mysqli_num_rows($horseQuery) == 0) {
+						echo "<span class='noResults'>No horses found matching " . $term . "</span>";
+					}
+
+                    while($row = mysqli_fetch_array($horseQuery)) {
+                        echo "<div class='gridViewItem'>
+                                <span role='link' tabindex='0' onclick='openPage(\"horseProfile.php?id=" . $row['horse_id'] . "\")'> 
+                                <img src='" . $row['horse_image'] . "'>
+
+                                <div class='gridViewInfo'>"
+                                    . $row['horse_name'] .
+                                "</div>
+                                </span>
+
+                            </div>";
+                    }
+                 ?>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+

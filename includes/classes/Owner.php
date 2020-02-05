@@ -33,6 +33,10 @@
 
 		}
 
+		public function getId() {
+			return $this->id;
+		}
+
 		public function getOwnerName() {
 			return $this->ownerName;
 		}

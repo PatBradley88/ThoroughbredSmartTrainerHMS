@@ -187,7 +187,8 @@ body {
 }
 
 .ownerInfoContainer h2,
-.gridViewContainer h2 {
+.gridViewContainer h2,
+.ownersContainer h2 {
 	text-align: center;
 }
 
@@ -214,6 +215,24 @@ body {
 input:focus {
 	outline: none;
 }
+
+.searchResultRow {
+	padding: 15px 10px;
+}
+
+.searchResultRow:hover {
+	background-color: #282828;
+}
+
+.searchResultRow .ownerName {
+	color: #fff;
+}
+
+.noResults {
+	display: block;
+	margin: 15px;
+}
+
 
 
 
