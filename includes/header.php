@@ -1,6 +1,7 @@
 <?php 
 include("includes/config.php");
 include("includes/classes/Category.php");
+include("includes/classes/User.php");
 include("includes/classes/Horse.php");
 include("includes/classes/Owner.php");
 
@@ -9,11 +10,13 @@ include("includes/classes/Owner.php");
 //session_destroy(); Temp Logout Button
 
 if (isset($_SESSION['userLoggedIn'])) {
-    $userLoggedIn = $_SESSION['userLoggedIn'];
-    echo "<script>userLoggedIn = '$userLoggedIn';</script>";
+    $userLoggedIn = new User($con, $_SESSION['userLoggedIn']);
+    $username = $userLoggedIn->getUsername();
+    echo "<script>userLoggedIn = '$username';</script>";
 } else {
     header("Location: register.php");
 }
+
 
 ?>
 

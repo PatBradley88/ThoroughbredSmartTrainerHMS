@@ -110,7 +110,7 @@ body {
 }
 
 .gridViewItem img {
-	width: 100%
+	width: 100%;
 }
 
 .gridViewInfo {
@@ -231,6 +231,15 @@ input:focus {
 .noResults {
 	display: block;
 	margin: 15px;
+}
+
+.buttonItems .button {
+	display: block;
+	margin: 0 auto 20px auto;
+}
+
+.userInfo h1 {
+	text-align: center;
 }
 
 

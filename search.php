@@ -21,7 +21,7 @@ else {
 $(".searchInput").focus();
 	
 $(function() {
-	var timer;
+	
 
 	$(".searchInput").keyup(function() {
 		clearTimeout(timer);
@@ -43,25 +43,36 @@ $(function() {
 	<h2>OWNERS</h2>
 
 	<?php 
-	$ownerQuery = mysqli_query($con, "SELECT owner_id FROM owners WHERE name LIKE '$term%' LIMIT 10");
+	$ownerQuery = mysqli_query($con, "SELECT * FROM owners WHERE name LIKE '$term%' LIMIT 10");
 
 	if(mysqli_num_rows($ownerQuery) == 0) {
 		echo "<span class='noResults'>No owners found matching " . $term . "</span>";
 	}
 
 	while ($row = mysqli_fetch_array($ownerQuery)) {
-		$ownerFound = new Owner($con, $row['owner_id']);
+		// $ownerFound = new Owner($con, $row['owner_id']);
 
-		echo "<div class='searchResultRow'>
-				<div class='ownerName'>
-					<span role='link' tabindex='0' onclick='openPage(\"ownerProfile.php?id=" . $ownerFound->getId() ."\")'>
-					"
-					. $ownerFound->getOwnerName() .
-					"
-					</span>
-				</div>
+		// echo "<div class='searchResultRow'>
+		// 		<div class='ownerName'>
+		// 			<span role='link' tabindex='0' onclick='openPage(\"ownerProfile.php?id=" . $ownerFound->getId() ."\")'>
+		// 			"
+		// 			. $ownerFound->getOwnerName() .
+		// 			"
+		// 			</span>
+		// 		</div>
 				
-			</div>";
+		// 	</div>";
+
+		echo "<div class='gridViewItem'>
+                <span role='link' tabindex='0' onclick='openPage(\"ownerProfile.php?id=" . $row['owner_id'] . "\")'> 
+                <img src='" . $row['owner_colours'] . "'>
+
+                <div class='gridViewInfo'>"
+                    . $row['name'] .
+                "</div>
+                </span>
+
+            </div>";
 
 	}
 
@@ -70,6 +81,8 @@ $(function() {
 </div>
 
 <div class="gridViewContainer">
+
+	<h2>HORSES</h2>
                 
                 <?php 
                     $horseQuery = mysqli_query($con, "SELECT * FROM horses WHERE horse_name LIKE '$term%' LIMIT 10");
