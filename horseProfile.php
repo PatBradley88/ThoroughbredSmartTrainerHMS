@@ -16,7 +16,8 @@ $category = $horse->getCategory();
 $owner = $horse->getOwner();
 ?>
 
-<div class="entityInfo">
+<div class="entityInfo borderBottom">
+    <h1>Copper Beech Stables</h1>
 
     <div class="leftSection">
         <img src="<?php echo $horse->getHorseImage(); ?>">
@@ -31,8 +32,21 @@ $owner = $horse->getOwner();
         <span>Sire: <?php echo $horse->getSire(); ?></span>
         <br><br>
         <span>Dam: <?php echo $horse->getDam(); ?></span><br><br>
-        <span>Owner: <?php echo $owner->getOwnerName(); ?></span>
     </div>
+
+</div>
+
+<div class="horseInfoContainer">
+    <h2>HISTORY</h2>
+    <span>Date of Birth: <?php echo $horse->getDoB(); ?></span>
+    <br><br>
+    <span>Owner: <?php echo $owner->getOwnerName(); ?></span>
+    <br><br>
+    <span>Breeder: <?php echo $horse->getBreeder(); ?></span>
+    <br><br>
+    <span>Received from: <?php echo $horse->getReceivedFrom(); ?></span>
+    
+
 
 </div>
 

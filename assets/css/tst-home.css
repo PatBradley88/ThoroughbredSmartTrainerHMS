@@ -153,6 +153,10 @@ body {
 	margin-top: 0px;
 }
 
+.entityInfo h1 {
+	text-align: center;
+}
+
 .ownerInfo {
 	text-align: center;
 }
@@ -188,7 +192,8 @@ body {
 
 .ownerInfoContainer h2,
 .gridViewContainer h2,
-.ownersContainer h2 {
+.ownersContainer h2,
+.horseInfoContainer h2 {
 	text-align: center;
 }
 

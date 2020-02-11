@@ -12,6 +12,9 @@
 		private $horseColour;
 		private $horseSire;
 		private $horseDam;
+		private $horseBreeder;
+		private $horseDoB;
+		private $horseReceivedFrom;
 
 		public function __construct($con, $id){
 			$this->con = $con;
@@ -27,6 +30,9 @@
 			$this->horseColour = $horse['colour'];
 			$this->horseSire = $horse['sire'];
 			$this->horseDam = $horse['dam'];
+			$this->horseBreeder = $horse['breeder'];
+			$this->horseDoB = $horse['dateOfBirth'];
+			$this->horseReceivedFrom = $horse['received_from'];
 			
 
 		}
@@ -39,8 +45,16 @@
 			return new Category($this->con, $this->categoryId);
 		}
 
+		public function getDoB() {
+			return $this->horseDoB;
+		}
+
 		public function getOwner() {
 			return new Owner($this->con, $this->ownerId);
+		}
+
+		public function getBreeder() {
+			return $this->horseBreeder;
 		}
 
 		public function getHorseImage() {
@@ -57,6 +71,10 @@
 
 		public function getDam() {
 			return $this->horseDam;
+		}
+
+		public function getReceivedFrom() {
+			return $this->horseReceivedFrom;
 		}
 
 	}
