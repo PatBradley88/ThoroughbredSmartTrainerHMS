@@ -25,6 +25,12 @@ $owner = $horse->getOwner();
     <div class="rightSection">
         <h2><?php echo $horse->getName(); ?></h2>
         <span><?php echo $category->getType(); ?></span><br><br>
+        
+        <span>Colour: <?php echo $horse->getColour(); ?></span>
+        <br><br>
+        <span>Sire: <?php echo $horse->getSire(); ?></span>
+        <br><br>
+        <span>Dam: <?php echo $horse->getDam(); ?></span><br><br>
         <span>Owner: <?php echo $owner->getOwnerName(); ?></span>
     </div>
 
