@@ -99,6 +99,20 @@ body {
 	text-align: center;
 }
 
+.pageHeadingBig button {
+	color: #fff;
+	cursor: pointer;
+	margin-bottom: 10px;
+	background-color: transparent;
+	font-weight: 500;
+	letter-spacing: 2px;
+	border: 2px solid #fff;
+	border-radius: 500px;
+	padding: 15px;
+	min-width: 130px;
+	float: right;
+}
+
 
 .gridViewItem {
 	display: inline-block;
@@ -165,6 +179,20 @@ body {
 	width: 200px;
 	min-width: 130px;
 	border-radius: 500px;
+}
+
+.editButton {
+	color: #fff;
+	cursor: pointer;
+	margin-bottom: 10px;
+	background-color: transparent;
+	font-weight: 500;
+	letter-spacing: 2px;
+	border: 2px solid #fff;
+	border-radius: 500px;
+	padding: 15px;
+	min-width: 130px;
+	float: right;
 }
 
 .button {
