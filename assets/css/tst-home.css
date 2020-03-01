@@ -301,7 +301,10 @@ input:focus {
 	padding: 0 20px;
 }
 
-
+.userDetails .container .message {
+	color: #2ebd59;
+	font-weight: 300;
+}
 
 
 

@@ -1,6 +1,15 @@
 var userLoggedIn;
 var timer;
 
+function updateEmail(emailClass) {
+	var emailValue = $("." + emailClass).val();
+
+	$.post("includes/handlers/ajax/updateEmail.php", { email: emailValue, username: userLoggedIn})
+	.done(function(response) {
+		$("." + emailClass).nextAll(".message").text(response);
+	})
+}
+
 function logout() {
 	$.post("includes/handlers/ajax/logout.php", function() {
 		location.reload();
