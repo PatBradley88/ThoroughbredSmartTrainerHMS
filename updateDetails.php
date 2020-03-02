@@ -17,7 +17,7 @@ include("includes/includedFiles.php");
 		<input type="password" name="newPassword1" class="newPassword1" placeholder="New password">
 		<input type="password" name="newPassword2" class="newPassword2" placeholder="Confirm password">
 		<span class="message"></span>
-		<button class="button">SAVE</button>
+		<button class="button" onclick="updatePassword('oldPassword', 'newPassword1', 'newPassword2')">SAVE</button>
 	</div>
 	
 </div>
