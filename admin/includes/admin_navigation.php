@@ -30,10 +30,10 @@
                                 <span role="link" href="javascript:;" data-toggle="collapse" data-target="#horse_dropdown" class="navItemLink"><i class="fas fa-horse-head"></i> Horses </i></span>
                                     <ul id="horse_dropdown" class="collapse">
                                         <li>
-                                            <span role="link" href="./viewHorses.php" class="navItemLink">View All Horses</span>
+                                            <a role="link" href="./viewHorses.php" class="navItemLink">View All Horses</a>
                                         </li>
                                         <li>
-                                            <span role="link" href="#" class="navItemLink">Add Horses</span>
+                                            <a role="link" href="./viewHorses.php?source=addHorse" class="navItemLink">Add Horses</a>
                                         </li>
                                     </ul>
                             </div>

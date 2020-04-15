@@ -25,7 +25,8 @@
                                 <span role="link" tabindex="0" onclick="openPage('owner.php')" class="navItemLink">Owners</span>
                             </div>
                             <div class="navItem">
-                                <span role="link" tabindex="0" onclick="openPage('admin/index.php?')" class="navItemLink">Admin</span>
+                                <!-- <span role="link" tabindex="0" onclick="openPage('admin/index.php')" class="navItemLink">Admin</span> -->
+                                <a role="link" tabindex="0" href="admin/index.php" " class="navItemLink">Admin</a>
                             </div>
                             <div class="navItem">
                                 <span role="link" tabindex="0" onclick="openPage('settings.php')" class="navItemLink"><?php echo $userLoggedIn->getFirstAndLastName(); ?></span>
