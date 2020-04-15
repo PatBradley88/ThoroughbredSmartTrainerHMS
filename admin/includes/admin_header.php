@@ -1,3 +1,7 @@
+<?php 
+include("../includes/config.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,13 +16,17 @@
     <title>SB Admin - Bootstrap Admin Template</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- Custom CSS -->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    
+    <!-- My CSS -->
+    <link href="css/tst-admin.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+    <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,3 +38,15 @@
 </head>
 
 <body>
+
+    <div id="mainContainer">
+    
+    <div id="topContainer">
+
+    <?php include("includes/admin_navigation.php"); ?>
+            
+    </div>
+
+    <div id="mainViewContainer">
+
+        <div id="mainContent">
