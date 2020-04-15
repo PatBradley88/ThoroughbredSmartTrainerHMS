@@ -24,8 +24,8 @@
 			$horse = mysqli_fetch_array($query);
 
 			$this->horseName = $horse['horse_name'];
-			$this->categoryId = $horse['category'];
-			$this->ownerId = $horse['owner'];
+			$this->categoryId = $horse['category_id'];
+			$this->ownerId = $horse['owner_id'];
 			$this->horseImage = $horse['horse_image'];
 			$this->horseColour = $horse['colour'];
 			$this->horseSire = $horse['sire'];
