@@ -33,7 +33,18 @@
                                             <a role="link" href="./viewHorses.php" class="navItemLink">View All Horses</a>
                                         </li>
                                         <li>
-                                            <a role="link" href="./viewHorses.php?source=addHorse" class="navItemLink">Add Horses</a>
+                                            <a role="link" href="./viewHorses.php?source=addHorse" class="navItemLink">Add Horse</a>
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="navItem">
+                                <span role="link" href="javascript:;" data-toggle="collapse" data-target="#horse_dropdown" class="navItemLink"><i class="fas fa-horse-head"></i> Owners </i></span>
+                                    <ul id="horse_dropdown" class="collapse">
+                                        <li>
+                                            <a role="link" href="./viewOwners.php" class="navItemLink">View All Owners</a>
+                                        </li>
+                                        <li>
+                                            <a role="link" href="./viewOwners.php?source=addOwner" class="navItemLink">Add Owner</a>
                                         </li>
                                     </ul>
                             </div>

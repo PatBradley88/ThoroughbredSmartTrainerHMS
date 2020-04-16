@@ -4,7 +4,7 @@ include("includes/includedFiles.php");
 ?>
 
                 
-            <h1 class="pageHeadingBig">Copper Beech Stables <button onclick="openPage('addHorse.php')">ADD HORSE</button></h1>
+            <h1 class="pageHeadingBig">Copper Beech Stables <button><a href="admin/viewHorses.php?source=addHorse">ADD HORSE</a></button></h1>
 
             <div class="gridViewContainer">
                 

@@ -13,12 +13,12 @@
 		}
 
 		switch($source) {
-			case 'addHorse';
-			include("includes/addHorse.php");
+			case 'addOwner';
+			include("includes/addOwner.php");
 			break;
 
-			case 'editHorse';
-			include("includes/editHorse.php");
+			case 'editOwner';
+			include("includes/editOwner.php");
 			break;
 
 			case '200';
@@ -27,7 +27,7 @@
 
 			default:
 
-			include("includes/view_all_horses.php");
+			include("includes/view_all_owners.php");
 
 			break;
 		}

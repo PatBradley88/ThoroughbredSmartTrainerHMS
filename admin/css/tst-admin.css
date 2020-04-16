@@ -191,6 +191,7 @@ header::after {
 }
 
 .horseDetails .container input[type="text"],
+.horseDetails .container input[type="email"],
 .horseDetails .container input[type="date"],
 .horseDetails .container .button {
     display: block;
@@ -198,6 +199,7 @@ header::after {
 }
 
 .horseDetails .container input[type="text"],
+.horseDetails .container input[type="email"],
 .horseDetails .container input[type="date"] {
     height: 50px;
     width: 90%;

@@ -48,7 +48,7 @@ if (isset($_GET['id'])) {
 <div class="gridViewContainer">
                 <h2>HORSES</h2>
                 <?php 
-                    $horseQuery = mysqli_query($con, "SELECT * FROM horses WHERE owner='$ownerId'");
+                    $horseQuery = mysqli_query($con, "SELECT * FROM horses WHERE owner_id='$ownerId'");
 
                     while($row = mysqli_fetch_array($horseQuery)) {
                         echo "<div class='gridViewItem'>
