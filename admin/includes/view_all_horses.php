@@ -55,7 +55,7 @@
 			echo "<td>{$received_from}</td>";
 			echo "<td>{$training_status}</td>";
 			echo "<td>{$added_date}</td>";
-			echo "<td><a href='#'><i class='fas fa-edit'></i></a></td>";
+			echo "<td><a href='viewHorses.php?source=editHorse&h_id={$horse_id}'><i class='fas fa-edit'></i></a></td>";
 			echo "<td><a href='viewHorses.php?delete={$horse_id}'><i class='far fa-trash-alt'></i></a></td>";
 		echo "</tr>";
 		}

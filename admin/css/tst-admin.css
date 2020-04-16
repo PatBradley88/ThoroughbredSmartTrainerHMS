@@ -210,7 +210,8 @@ header::after {
     padding: 0 20px;
 }
 
-.horseDetails .container input[type="file"] {
+.horseDetails .container input[type="file"],
+.horseDetails .container img {
     margin-left: 5%;
 }
 

@@ -18,7 +18,7 @@ $owner = $horse->getOwner();
 
 <div class="entityInfo borderBottom">
     <h1>Copper Beech Stables</h1>
-    <button class="editButton" onclick="openPage('updateHorse.php')">EDIT HORSE</button>
+    <button class="editButton" "><a href=""></a>EDIT HORSE</button>
 
 
     <div class="leftSection">
