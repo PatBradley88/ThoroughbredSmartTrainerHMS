@@ -46,7 +46,7 @@
 			echo "<td>{$horses}</td>";
 			echo "<td>{$training_status}</td>";
 			echo "<td>{$added_date}</td>";
-			echo "<td><a href='#'><i class='fas fa-edit'></i></a></td>";
+			echo "<td><a href='viewOwners.php?source=editOwner&o_id={$owner_id}'><i class='fas fa-edit'></i></a></td>";
 			echo "<td><a href='viewOwners.php?delete={$owner_id}'><i class='far fa-trash-alt'></i></a></td>";
 		echo "</tr>";
 		}
