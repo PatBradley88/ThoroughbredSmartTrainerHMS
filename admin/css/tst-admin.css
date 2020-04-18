@@ -198,6 +198,19 @@ header::after {
     margin: 16px auto;
 }
 
+#horse_category {
+    margin-left: 5%;
+    height: 50px;
+    width: 90%;
+    background: #1f1f1f;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 20px;
+    display: block;
+    margin: 16px auto;
+    border: none;
+}
+
 .horseDetails .container input[type="text"],
 .horseDetails .container input[type="email"],
 .horseDetails .container input[type="date"] {
