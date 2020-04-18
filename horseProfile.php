@@ -18,7 +18,7 @@ $owner = $horse->getOwner();
 
 <div class="entityInfo borderBottom">
     <h1>Copper Beech Stables</h1>
-    <button class="editButton" onclick="openPage('updateHorse.php')">EDIT HORSE</button>
+    <button class="editButton"><a href="admin/viewHorses.php?source=editHorse&h_id={$horse_id}"></a>EDIT HORSE</button>
 
 
     <div class="leftSection">
@@ -27,7 +27,7 @@ $owner = $horse->getOwner();
     
     <div class="rightSection">
         <h2><?php echo $horse->getName(); ?></h2>
-        <span><?php echo $category->getType(); ?></span><br><br>
+        <span>Category: <?php echo $category->getType(); ?></span><br><br>
         
         <span>Colour: <?php echo $horse->getColour(); ?></span>
         <br><br>
