@@ -44,13 +44,43 @@
 		echo "<tr>";
 			echo "<td>{$horse_name}</td>";
 			echo "<td><img width='100' src='../$horse_image' alt='image'></td>";
-			echo "<td>{$category_id}</td>";
+
+
+			$query = "SELECT * FROM category WHERE cat_id = {$category_id}";
+			$select_category = mysqli_query($con, $query);
+
+			if (!$select_category) {
+
+		      die ("Query Failed" . mysqli_error($con));
+
+		    }
+			while($row = mysqli_fetch_assoc($select_category)) {
+				$cat_id = $row['cat_id'];
+				$cat_type = $row['cat_type'];
+			
+			echo "<td>{$cat_type}</td>";
+			}
+
 			echo "<td>{$dateOfBirth}</td>";
 			echo "<td>{$colour}</td>";
 			echo "<td>{$passport_no}</td>";
 			echo "<td>{$sire}</td>";
 			echo "<td>{$dam}</td>";
-			echo "<td>{$owner_id}</td>";
+
+			$query = "SELECT * FROM owners WHERE owner_id = {$owner_id}";
+			$select_owner = mysqli_query($con, $query);
+
+			if (!$select_owner) {
+
+		      die ("Query Failed" . mysqli_error($con));
+
+		    }
+			while($row = mysqli_fetch_assoc($select_owner)) {
+				$owner_id = $row['owner_id'];
+				$name = $row['name'];
+			echo "<td>{$name}</td>";
+			}
+
 			echo "<td>{$breeder}</td>";
 			echo "<td>{$received_from}</td>";
 			echo "<td>{$training_status}</td>";
