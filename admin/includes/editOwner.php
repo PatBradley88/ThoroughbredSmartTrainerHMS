@@ -30,12 +30,12 @@
 		$email = $_POST['email'];
 		$contactNo = $_POST['contactNo'];
 
-		$owner_colours = $_FILES['image']['name'];
-		$owner_colours_temp = $_FILES['image']['tmp_name'];
+		// $owner_colours = $_FILES['image']['name'];
+		// $owner_colours_temp = $_FILES['image']['tmp_name'];
 
 		$training_status = $_POST['training_status'];
 
-		move_uploaded_file($owner_colours_temp, "$owner_colours");
+		// move_uploaded_file($owner_colours_temp, "$owner_colours");
 
 		if(empty($owner_colours)) {
 			$query = "SELECT * FROM owners WHERE owner_id = $the_owner_id";
@@ -54,7 +54,7 @@
 		$query .="email = '{$email}', ";
 		$query .="contactNo = '{$contactNo}', ";
 		$query .="horses = '{$horses}', ";
-		$query .="owner_colours = '{$owner_colours}', ";
+		// $query .="owner_colours = '{$owner_colours}', ";
 		$query .="training_status = '{$training_status}', ";
 		$query .="added_date = now() ";
 		$query .= "WHERE owner_id = {$the_owner_id} ";
@@ -85,7 +85,7 @@
 		<input type="email" name="email" placeholder="Email" value="<?php echo $email; ?>">
 		<input type="text" name="contactNo" placeholder="Contact no." value="<?php echo $contactNo; ?>">
 		<img width="100" src="../<?php echo $owner_colours; ?>" alt="">
-		<input type="file" name="image">
+		<!-- <input type="file" name="image"> -->
 	</div>
 
 	<div class="container">
