@@ -63,7 +63,15 @@
                                     </ul>
                             </div>
                             <div class="navItem">
-                                <span role="link" tabindex="0" class="navItemLink"><i class="fas fa-stethoscope"></i> Vet</span>
+                                <span role="link" href="javascript:;" data-toggle="collapse" data-target="#horse_dropdown" class="navItemLink"><i class="fas fa-stethoscope"></i> Vet </i></span>
+                                    <ul id="horse_dropdown" class="collapse">
+                                        <li>
+                                            <a role="link" href="./viewVet.php" class="navItemLink">View All Vet Notes</a>
+                                        </li>
+                                        <li>
+                                            <a role="link" href="./viewVet.php?source=addVet" class="navItemLink">Add Vet Note</a>
+                                        </li>
+                                    </ul>
                             </div>
                             <div class="navItem">
                                 <span role="link" tabindex="0" class="navItemLink"><i class="fas fa-users-cog"></i> Admin</span>
