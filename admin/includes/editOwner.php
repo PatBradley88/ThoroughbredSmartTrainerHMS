@@ -21,53 +21,53 @@
 		$added_date = $row['added_date'];
 	}
 
-	// if(isset($_POST['update_owner'])) {
+	if(isset($_POST['update_owner'])) {
 		
-	// 	$name = $_POST['name'];
-	// 	$address1 = $_POST['address1'];
-	// 	$address2 = $_POST['address2'];
-	// 	$address3 = $_POST['address3'];
-	// 	$email = $_POST['email'];
-	// 	$contactNo = $_POST['contactNo'];
+		$name = $_POST['name'];
+		$address1 = $_POST['address1'];
+		$address2 = $_POST['address2'];
+		$address3 = $_POST['address3'];
+		$email = $_POST['email'];
+		$contactNo = $_POST['contactNo'];
 
-	// 	$owner_colours = $_FILES['image']['name'];
-	// 	$owner_colours_temp = $_FILES['image']['tmp_name'];
+		$owner_colours = $_FILES['image']['name'];
+		$owner_colours_temp = $_FILES['image']['tmp_name'];
 
-	// 	$training_status = $_POST['training_status'];
+		$training_status = $_POST['training_status'];
 
-	// 	move_uploaded_file($owner_colours_temp, "../assets/images/ownerColours/$owner_colours");
+		move_uploaded_file($owner_colours_temp, "$owner_colours");
 
-	// 	if(empty($owner_colours)) {
-	// 		$query = "SELECT * FROM owners WHERE owner_id = $the_owner_id";
-	// 		$select_image = mysqli_query($con, $query);
+		if(empty($owner_colours)) {
+			$query = "SELECT * FROM owners WHERE owner_id = $the_owner_id";
+			$select_image = mysqli_query($con, $query);
 
-	// 		while($row = mysqli_fetch_array($select_image)) {
-	// 			$owner_colours = $row['owner_colours'];
-	// 		}
-	// 	}
+			while($row = mysqli_fetch_array($select_image)) {
+				$owner_colours = $row['owner_colours'];
+			}
+		}
 
-	// 	$query = "UPDATE owners SET ";
-	// 	$query .="name = '{$name}', ";
-	// 	$query .="address1 = '{$address1}', ";
-	// 	$query .="address2 = '{$address2}', ";
-	// 	$query .="address3 = '{$address3}', ";
-	// 	$query .="email = '{$email}', ";
-	// 	$query .="contactNo = '{$contactNo}', ";
-	// 	$query .="horses = '{$horses}', ";
-	// 	$query .="owner_colours = 'assets/images/ownerColours/{$owner_colours}', ";
-	// 	$query .="training_status = '{$training_status}', ";
-	// 	$query .="added_date = now() ";
-	// 	$query .= "WHERE horse_id = {$the_horse_id} ";
+		$query = "UPDATE owners SET ";
+		$query .="name = '{$name}', ";
+		$query .="address1 = '{$address1}', ";
+		$query .="address2 = '{$address2}', ";
+		$query .="address3 = '{$address3}', ";
+		$query .="email = '{$email}', ";
+		$query .="contactNo = '{$contactNo}', ";
+		$query .="horses = '{$horses}', ";
+		$query .="owner_colours = '{$owner_colours}', ";
+		$query .="training_status = '{$training_status}', ";
+		$query .="added_date = now() ";
+		$query .= "WHERE owner_id = {$the_owner_id} ";
 
-	// 	$update_owner = mysqli_query($con, $query);
+		$update_owner = mysqli_query($con, $query);
 
-	// 	if (!$update_owner) {
+		if (!$update_owner) {
 
-	// 	      die ("Query Failed" . mysqli_error($con));
+		      die ("Query Failed" . mysqli_error($con));
 
-	// 	    }
+		    }
 		    
-	// 	}
+		}
 
 ?>
 
@@ -91,7 +91,7 @@
 	<div class="container">
 		<h2>TRAINING STATUS</h2>
 		<input type="text" name="training_status" placeholder="Training Status" value="<?php echo $training_status; ?>">
-		<button class="button" onclick="" value="Update Owner" name="update_owner">ADD OWNER</button>
+		<button class="button" onclick="" value="Update Owner" name="update_owner">UPDATE OWNER</button>
 	</div>
 	
 </div>

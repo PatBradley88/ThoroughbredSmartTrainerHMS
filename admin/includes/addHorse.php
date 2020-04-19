@@ -17,13 +17,13 @@ if(isset($_POST['add_horse'])) {
 	$training_status = $_POST['training_status'];
 	$added_date = date('m.d.y');
 
-	move_uploaded_file($horse_image_temp, "../assets/images/horses/$horse_image");
+	move_uploaded_file($horse_image_temp, "../images/$horse_image");
 
 	$query = "INSERT INTO horses(horse_name, horse_image, category_id, dateOfBirth,
 								colour, passport_no, sire, dam, owner_id, breeder,
 								received_from, training_status, added_date)";
 
-	$query .= "VALUES('{$horse_name}', 'assets/images/horses/{$horse_image}', {$category_id}, 
+	$query .= "VALUES('{$horse_name}', 'images/{$horse_image}', {$category_id}, 
 				'{$dateOfBirth}', '{$colour}', '{$passport_no}', '{$sire}', '{$dam}', {$owner_id},
 				'{$breeder}', '{$received_from}',
 				'{$training_status}', now())";
