@@ -37,10 +37,10 @@ if (isset($_SESSION['userLoggedIn'])) {
 <!--     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
  -->
     <!-- Custom CSS -->
-    <link href="assets/css/tst-home.css" rel="stylesheet">
+    <link href="css/tst-home.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="js/script.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
