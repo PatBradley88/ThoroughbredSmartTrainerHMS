@@ -38,7 +38,7 @@
                                     </ul>
                             </div>
                             <div class="navItem">
-                                <span role="link" href="javascript:;" data-toggle="collapse" data-target="#horse_dropdown" class="navItemLink"><i class="fas fa-horse-head"></i> Owners </i></span>
+                                <span role="link" href="javascript:;" data-toggle="collapse" data-target="#horse_dropdown" class="navItemLink"><i class="fas fa-user-secret"></i> Owners </i></span>
                                     <ul id="horse_dropdown" class="collapse">
                                         <li>
                                             <a role="link" href="./viewOwners.php" class="navItemLink">View All Owners</a>
