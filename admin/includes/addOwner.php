@@ -13,14 +13,14 @@ if(isset($_POST['add_owner'])) {
 	$training_status = $_POST['training_status'];
 	$added_date = date('m.d.y');
 
-	move_uploaded_file($owner_colours_temp, "../assets/images/ownerColours/$owner_colours");
+	move_uploaded_file($owner_colours_temp, "../images/ownerColours/$owner_colours");
 
 	$query = "INSERT INTO owners(name, address1, address2, address3,
 								email, contactNo, owner_colours,
 								 training_status, added_date)";
 
 	$query .= "VALUES('{$name}', '{$address1}', '{$address2}', '{$address3}', '{$email}',
-			'{$contactNo}', 'assets/images/ownerColours/{$owner_colours}', '{$training_status}', now())";
+			'{$contactNo}', 'images/ownerColours/{$owner_colours}', '{$training_status}', now())";
 
 
 	$create_owner_query = mysqli_query($con, $query);
