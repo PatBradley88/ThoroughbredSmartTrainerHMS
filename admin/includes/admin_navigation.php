@@ -52,7 +52,15 @@
                                 <span role="link" tabindex="0" class="navItemLink"><i class="fas fa-horse"></i> Categories </span>
                             </div>
                             <div class="navItem">
-                                <span role="link" tabindex="0" class="navItemLink"><i class="fas fa-magnet"></i> Farrier </span>
+                                <span role="link" href="javascript:;" data-toggle="collapse" data-target="#horse_dropdown" class="navItemLink"><i class="fas fa-magnet"></i> Farrier </i></span>
+                                    <ul id="horse_dropdown" class="collapse">
+                                        <li>
+                                            <a role="link" href="./viewFarrier.php" class="navItemLink">View All Farrier Notes</a>
+                                        </li>
+                                        <li>
+                                            <a role="link" href="./viewFarrier.php?source=addFarrier" class="navItemLink">Add Farrier Note</a>
+                                        </li>
+                                    </ul>
                             </div>
                             <div class="navItem">
                                 <span role="link" tabindex="0" class="navItemLink"><i class="fas fa-stethoscope"></i> Vet</span>
