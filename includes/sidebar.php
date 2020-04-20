@@ -3,14 +3,14 @@
                     <nav class="sideBar">
 
                         <span role="link" tabindex="0" onclick="openPage('index.php')" class="logo">
-                            <img src="assets/images/TSTWht.png">
+                            <img src="images/TSTWht.png">
                         </span>
 
                         <div class="group">
 
                             <div class="navItem">
                                 <span role="link" tabindex="0" onclick="openPage('search.php')" class="navItemLink">Search
-                                    <img src="assets/images/search.png" class="icon" alt="search">
+                                    <img src="images/search.png" class="icon" alt="search">
                                 </span>
                             </div>
 
