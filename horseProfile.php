@@ -18,7 +18,7 @@ $owner = $horse->getOwner();
 
 <div class="entityInfo borderBottom">
     <h1>Copper Beech Stables</h1>
-    <button class="editButton"><a href="admin/viewHorses.php?source=editHorse&h_id={$horse_id}"></a>EDIT HORSE</button>
+    <button class="editButton"><a href="viewHorses.php?source=editHorse&h_id={$horseId}"></a>EDIT HORSE</button>
 
 
     <div class="leftSection">
@@ -42,11 +42,13 @@ $owner = $horse->getOwner();
     <h2>HISTORY</h2>
     <span>Date of Birth: <?php echo $horse->getDoB(); ?></span>
     <br><br>
+    <span>Passport No: <?php echo $horse->getPassport(); ?></span>
+    <br><br>
     <span>Owner: <?php echo $owner->getOwnerName(); ?></span>
     <br><br>
     <span>Breeder: <?php echo $horse->getBreeder(); ?></span>
     <br><br>
-    <span>Received from: <?php echo $horse->getReceivedFrom(); ?></span>
+    <span>Received from: <?php echo $horse->getReceivedFrom(); ?></span><br><br>
 </div>
 
 <div class="horseInfoContainer borderBottom">

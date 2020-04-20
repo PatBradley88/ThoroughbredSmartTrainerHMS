@@ -1,6 +1,6 @@
 
 
-        <header>
+        <!-- <header>
             <div class="navContainer">
                 <a class="logo" href="../horses.php">Thoroughbred Smart Trainer</a>
                 
@@ -16,10 +16,14 @@
                     </ul>
                 </nav>
             </div>    
-        </header>
+        </header> -->
                 <div id="sideBarContainer">
 
                     <nav class="sideBar">
+
+                        <a role="link" tabindex="0" href="../index.php" class="logo">
+                            <img src="images/TSTWht.png">
+                        </a>
 
                         <div class="group">
                             

@@ -10,6 +10,7 @@
 		private $categoryId;
 		private $ownerId;
 		private $horseColour;
+		private $horsePassport;
 		private $horseSire;
 		private $horseDam;
 		private $horseBreeder;
@@ -28,6 +29,7 @@
 			$this->ownerId = $horse['owner_id'];
 			$this->horseImage = $horse['horse_image'];
 			$this->horseColour = $horse['colour'];
+			$this->horsePassport = $horse['passport_no'];
 			$this->horseSire = $horse['sire'];
 			$this->horseDam = $horse['dam'];
 			$this->horseBreeder = $horse['breeder'];
@@ -63,6 +65,10 @@
 
 		public function getColour() {
 			return $this->horseColour;
+		}
+
+		public function getPassport() {
+			return $this->horsePassport;
 		}
 
 		public function getSire() {
