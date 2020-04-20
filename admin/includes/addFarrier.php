@@ -15,9 +15,9 @@ if(isset($_POST['add_farrier'])) {
 				'{$farrier_note_poster}', now())";
 
 
-	$create_owner_query = mysqli_query($con, $query);
+	$create_farrier_query = mysqli_query($con, $query);
 
-	 if (!$create_owner_query) {
+	 if (!$create_farrier_query) {
 
       die ("Query Failed" . mysqli_error($con));
 
@@ -32,7 +32,7 @@ if(isset($_POST['add_farrier'])) {
 <div class="horseDetails">
 
 	<div class="container borderBottom">
-		<h2>Farrier </h2>
+		<h2>FARRIER </h2>
 		<div>
 			<select name="farrier_horse_id" id="horse_category">
 			<?php 
