@@ -13,12 +13,12 @@
 		}
 
 		switch($source) {
-			case 'addVet';
-			include("includes/addVet.php");
+			case 'addFarrier';
+			include("includes/addFarrier.php");
 			break;
 
 			case 'editVet';
-			include("includes/editVet.php");
+			include("includes/editFarrier.php");
 			break;
 
 			case '200';
@@ -27,7 +27,7 @@
 
 			default:
 
-			include("includes/view_all_vet.php");
+			include("includes/view_all_farrier.php");
 
 			break;
 		}
