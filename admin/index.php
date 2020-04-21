@@ -15,7 +15,7 @@
             			<div class="widgetContent">
             				<p>Horse in training at 
             				Copper Beech Stables.</p>
-            				<a href="#">Horses</a>
+            				<a href="../horses.php">Horses</a>
             			</div>
             		</div>
             	</div>
@@ -30,7 +30,7 @@
             			<div class="widgetContent">
             				<p>Horse in training at 
             				Copper Beech Stables.</p>
-            				<a href="#">Owners</a>
+            				<a href="../owner.php">Owners</a>
             			</div>
             		</div>
             	</div>
