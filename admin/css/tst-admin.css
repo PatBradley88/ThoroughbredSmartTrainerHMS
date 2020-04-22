@@ -343,6 +343,9 @@ header::after {
     padding: 5px;
     border: 1px solid #333;
 }
+.button2 {
+    float: right;
+}
 
 .widgetContainer .card .face.face2 .widgetContent a:hover {
     background: #333;
