@@ -61,7 +61,41 @@
             		</div>
             	</div>
             </div>    
+			
+			<div class="row">
+				<script type="text/javascript">
+			          google.charts.load('current', {'packages':['bar']});
+				      google.charts.setOnLoadCallback(drawChart);
 
+				      function drawChart() {
+				        var data = google.visualization.arrayToDataTable([
+				          ['Copper Beech Stables', 'Horses', 'Colts', 'Fillys'],
+				          ['Horses', 1000, 400, 200],
+				          ['Owners', 1170, 460, 250],
+				          ['Status', 660, 1120, 300],
+				        ]);
+
+				        var options = {
+				          chart: {
+				            title: '',
+				            subtitle: '',
+				          },
+				          bars: 'vertical',
+				          vAxis: {format: 'decimal'},
+				          height: 400,
+				          backgroundColor: {
+				            fill: '#181818'
+				          },
+				          colors: ['#009879', '#00FFCC', '#00E6B8']
+				        };
+
+				        var chart = new google.charts.Bar(document.getElementById('chart_div'));
+
+				        chart.draw(data, google.charts.Bar.convertOptions(options));
+				      }
+			    </script>
+			    <div id="chart_div" class="chart"></div>
+			</div>
 
 
 
