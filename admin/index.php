@@ -60,7 +60,31 @@
             			</div>
             		</div>
             	</div>
-            </div>    
+            </div>
+
+            <?php  
+
+            $query = "SELECT * FROM horses WHERE category_id = 1";
+			$select_colt_cat = mysqli_query($con, $query);
+			$cat_colt_counts = mysqli_num_rows($select_colt_cat);
+
+			$query = "SELECT * FROM horses WHERE category_id = 2";
+			$select_filly_cat = mysqli_query($con, $query);
+			$cat_filly_counts = mysqli_num_rows($select_filly_cat);
+
+			$query = "SELECT * FROM horses WHERE category_id = 3";
+			$select_stallion_cat = mysqli_query($con, $query);
+			$cat_stallion_counts = mysqli_num_rows($select_stallion_cat);
+
+			$query = "SELECT * FROM horses WHERE category_id = 4";
+			$select_mare_cat = mysqli_query($con, $query);
+			$cat_mare_counts = mysqli_num_rows($select_mare_cat);
+
+			$query = "SELECT * FROM horses WHERE category_id = 5";
+			$select_gelding_cat = mysqli_query($con, $query);
+			$cat_gelding_counts = mysqli_num_rows($select_gelding_cat);
+
+            ?>    
 			
 			<div class="row">
 				<script type="text/javascript">
@@ -69,10 +93,21 @@
 
 				      function drawChart() {
 				        var data = google.visualization.arrayToDataTable([
-				          ['Copper Beech Stables', 'Horses', 'Colts', 'Fillys'],
-				          ['Horses', 1000, 400, 200],
-				          ['Owners', 1170, 460, 250],
-				          ['Status', 660, 1120, 300],
+				          ['Copper Beech Stables', 'Count'],
+				          
+					          <?php  
+
+					          $element_text = ['Horses', 'Colts', 'Fillys', 'Stallions', 'Mares', 'Geldings'];
+					          $element_count = [$horse_count, $cat_colt_counts, $cat_filly_counts, 
+					          					$cat_stallion_counts, $cat_mare_counts, $cat_gelding_counts];
+
+					          for($i = 0; $i < 6; $i++) {
+	                
+	                			echo "['{$element_text[$i]}'" . "," . "{$element_count[$i]}],";
+	                		   }
+
+					          ?>
+
 				        ]);
 
 				        var options = {
