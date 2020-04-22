@@ -1,22 +1,3 @@
-
-
-        <!-- <header>
-            <div class="navContainer">
-                <a class="logo" href="../horses.php">Thoroughbred Smart Trainer</a>
-                
-                <nav class="topNav">
-                    <ul>
-                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a></li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>    
-        </header> -->
                 <div id="sideBarContainer">
 
                     <nav class="sideBar">
@@ -28,7 +9,7 @@
                         <div class="group">
                             
                             <div class="navItem">
-                                <span role="link" href="../index.php" class="navItemLink"><i class="fas fa-tachometer-alt"></i> Dashboard</span>
+                                <a href="index.php" class="navItemLink"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                             </div>
                             <div class="navItem">
                                 <span role="link" href="javascript:;" data-toggle="collapse" data-target="#horse_dropdown" class="navItemLink"><i class="fas fa-horse-head"></i> Horses </i></span>

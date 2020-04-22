@@ -8,7 +8,12 @@
             		<div class="face face1">
             			<div class="widgetContent">
             				<img src="../images/bet(1).png">
-            				<h3>Horses</h3>
+            				<?php 
+            				$query = "SELECT * FROM horses";
+            				$select_all_horses = mysqli_query($con, $query);
+            				$horse_count = mysqli_num_rows($select_all_horses);
+            				echo "<h3>{$horse_count} Horses</h3>"
+            				?>
             			</div>
             		</div>
             		<div class="face face2">
@@ -23,7 +28,12 @@
             		<div class="face face1">
             			<div class="widgetContent">
             				<img src="../images/horse(2).png">
-            				<h3>Owners</h3>
+            				<?php 
+            				$query = "SELECT * FROM owners";
+            				$select_all_owners = mysqli_query($con, $query);
+            				$owner_count = mysqli_num_rows($select_all_owners);
+            				echo "<h3>{$owner_count} Owners</h3>"
+            				?>
             			</div>
             		</div>
             		<div class="face face2">
@@ -37,7 +47,6 @@
             	<div class="card">
             		<div class="face face1">
             			<div class="widgetContent">
-            				<!-- <img src="../images/horse-head-in-a-horseshoe.png"> -->
             				<img src="../images/horse(1).png">
             				<h3>Other</h3>
             			</div>
@@ -46,8 +55,8 @@
             			<div class="widgetContent">
             				<p>Horse in training at 
             				Copper Beech Stables.</p>
-            				<a href="#">Vet</a>
-            				<a class="button2" href="#">Farrier</a>
+            				<a href="./viewVet.php">Vet</a>
+            				<a class="button2" href="./viewFarrier.php">Farrier</a>
             			</div>
             		</div>
             	</div>
