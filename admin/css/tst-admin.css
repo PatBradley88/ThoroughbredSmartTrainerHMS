@@ -1,3 +1,9 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 * {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff; letter-spacing: 1px;
@@ -7,7 +13,12 @@ body {
     background-color: #181818;
     font-size: 14px;
     min-width: 720px;
-    margin: 0;
+/*    margin: 0;*/
+}
+
+#topContainer {
+    min-height: 100%;
+    width: 100%;
 }
 
 #sideBarContainer {
@@ -17,7 +28,6 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-/*    margin-top: 48px;*/
 }
 
 .sideBar {
@@ -67,61 +77,12 @@ body {
     width: 25px;
 }
 
-.navContainer {
-    width: 100%;
-    margin 0 auto;
-}
-
-header {
-    background: #000;
-}
-
-header::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
 .logo {
     float: left;
     padding-top: 17px;
     color: #a0a0a0;
     text-decoration: none;
     margin-left: 20px;
-}
-
-.topNav {
-    float: right;
-    margin-right: 20px
-}
-
-.topNav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.topNav li {
-    display: inline-block;
-    margin-left: 70px;
-    padding-top: 15px;
-    margin-bottom: 
-}
-
-.topNav a {
-    color: #a0a0a0;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-.topNav a:hover {
-    color: #fff;
-}
-
-#topContainer {
-    min-height: 100%;
-    width: 100%;
 }
 
 #mainViewContainer {
@@ -131,6 +92,7 @@ header::after {
 }
 
 #mainContent {
+    overflow: auto;
     padding: 0 20px;
 }
 
