@@ -59,14 +59,9 @@
                                     </ul>
                             </div>
                             <div class="navItem">
-                                <span role="link" tabindex="0" class="navItemLink"><i class="fas fa-users-cog"></i> Admin</span>
+                                <a class="navItemLink" href="../settings.php"><i class="fas fa-users-cog"></i> Settings</a>
                             </div>
-                            <div class="navItem">
-                                <span role="link" tabindex="0" onclick="openPage('settings.php')" class="navItemLink"></span>
-                            </div>
-
-                        </div>
-                        
+                        </div>   
                     </nav>
 
           
