@@ -2,7 +2,7 @@
 
 
         	<h1 class="pageHeadingBig">Copper Beech Stables Admin </h1>
-        	<h1 class="pageHeadingBig">HORSES </h1>
+        	<h1 class="pageHeadingBig">RACE DIARY </h1>
 
 		<?php 
 
@@ -14,12 +14,12 @@
 		}
 
 		switch($source) {
-			case 'addHorse';
-			include("includes/addHorse.php");
+			case 'addRace';
+			include("includes/addRace.php");
 			break;
 
-			case 'editHorse';
-			include("includes/editHorse.php");
+			case 'editRace';
+			include("includes/editRace.php");
 			break;
 
 			case '200';
@@ -28,7 +28,7 @@
 
 			default:
 
-			include("includes/view_all_horses.php");
+			include("includes/view_all_races.php");
 
 			break;
 		}

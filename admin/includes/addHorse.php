@@ -53,7 +53,7 @@ if(isset($_POST['add_horse'])) {
 		<input type="text" name="horse_name" placeholder="Horse Name" value="">
 		<input type="file" name="image" placeholder="Upload Image" value="">
 		<div>
-			<select name="horse_category" id="horse_category">
+			<select name="horse_category" id="horse_dropdown">
 			<?php 
 
 			$query = "SELECT * FROM category";
@@ -85,7 +85,7 @@ if(isset($_POST['add_horse'])) {
 	<div class="container borderBottom">
 		<h2>HORSE HISTORY</h2>
 		<div>
-			<select name="horse_owner" id="horse_category">
+			<select name="horse_owner" id="horse_dropdown">
 			<?php 
 
 			$query = "SELECT * FROM owners";

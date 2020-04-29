@@ -22,10 +22,10 @@
 <html>
 <head>
 	<title>Thoroughbred Smart Trainer</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/register.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="assets/js/register.js"></script>
+<script src="js/register.js"></script>
 
 </head>
 <body>
@@ -129,8 +129,8 @@
 			</div>
 
 			<div id="loginText">
-				<img id="MHLogo" src="assets/images/MHLogo.png">
-				<img id="SmartTrainerLogo" src="assets/images/SmartTrainerLogo.png">
+				<img id="MHLogo" src="images/MHLogo.png">
+				<img id="SmartTrainerLogo" src="images/SmartTrainerLogo.png">
 			</div>
 
 		</div>	

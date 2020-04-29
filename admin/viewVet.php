@@ -2,6 +2,7 @@
 
 
         	<h1 class="pageHeadingBig">Copper Beech Stables Admin </h1>
+        	<h1 class="pageHeadingBig">VETERINARY DIARY </h1>
 
 		<?php 
 

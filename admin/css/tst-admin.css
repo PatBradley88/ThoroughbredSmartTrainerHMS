@@ -105,7 +105,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
-    margin: 25px 0;
     font-size: 0.9em;
     min-width: 400px;
     border-radius: 5px 5px 0 0;
@@ -157,12 +156,13 @@ body {
 .horseDetails .container input[type="text"],
 .horseDetails .container input[type="email"],
 .horseDetails .container input[type="date"],
+.horseDetails .container input[type="number"],
 .horseDetails .container .button {
     display: block;
     margin: 16px auto;
 }
 
-#horse_category {
+#horse_dropdown {
     margin-left: 5%;
     height: 50px;
     width: 90%;
@@ -177,6 +177,7 @@ body {
 
 .horseDetails .container input[type="text"],
 .horseDetails .container input[type="email"],
+.horseDetails .container input[type="number"],
 .horseDetails .container input[type="date"] {
     height: 50px;
     width: 90%;

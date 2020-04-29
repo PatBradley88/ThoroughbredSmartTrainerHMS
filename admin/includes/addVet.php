@@ -34,7 +34,7 @@ if(isset($_POST['add_vet'])) {
 	<div class="container borderBottom">
 		<h2>VET </h2>
 		<div>
-			<select name="vet_horse_id" id="horse_category">
+			<select name="vet_horse_id" id="horse_dropdown">
 			<?php 
 
 			$query = "SELECT * FROM horses";
