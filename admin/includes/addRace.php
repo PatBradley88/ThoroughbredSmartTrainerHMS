@@ -38,9 +38,6 @@ if(isset($_POST['add_race'])) {
 ?>
 
 
-
-
-
 <form action="" method="post" enctype="multipart/form-data">
 
 <div class="horseDetails">
