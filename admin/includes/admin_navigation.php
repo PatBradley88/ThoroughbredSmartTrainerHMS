@@ -2,7 +2,7 @@
 
                     <nav class="sideBar">
 
-                        <a role="link" tabindex="0" href="../index.php" class="logo">
+                        <a href="../index.php" class="logo">
                             <img src="images/TSTWht.png">
                         </a>
 

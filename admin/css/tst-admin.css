@@ -130,7 +130,8 @@ nav ul li a span.rotate {
     padding-top: 17px;
     color: #a0a0a0;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #mainViewContainer {
