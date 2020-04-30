@@ -19,17 +19,17 @@
                         <div class="group">
                             
                             <div class="navItem">
-                                <span role="link" tabindex="0" class="navItemLink" onclick="openPage('horses.php')">Horses</span>
+                                <span role="link" tabindex="0" class="navItemLink" onclick="openPage('horses.php')"><i class="fas fa-horse-head"></i> Horses</span>
                             </div>
                             <div class="navItem">
-                                <span role="link" tabindex="0" onclick="openPage('owner.php')" class="navItemLink">Owners</span>
+                                <span role="link" tabindex="0" onclick="openPage('owner.php')" class="navItemLink"><i class="fas fa-user-friends"></i> Owners</span>
                             </div>
                             <div class="navItem">
                                 <!-- <span role="link" tabindex="0" onclick="openPage('admin/index.php')" class="navItemLink">Admin</span> -->
-                                <a role="link" tabindex="0" href="admin/index.php" " class="navItemLink">Admin</a>
+                                <a role="link" tabindex="0" href="admin/index.php" class="navItemLink"><i class="fas fa-tachometer-alt"></i> Admin</a>
                             </div>
                             <div class="navItem">
-                                <span role="link" tabindex="0" onclick="openPage('settings.php')" class="navItemLink"><?php echo $userLoggedIn->getFirstAndLastName(); ?></span>
+                                <span role="link" tabindex="0" onclick="openPage('settings.php')" class="navItemLink"><i class="fas fa-users-cog"></i> <?php echo $userLoggedIn->getFirstAndLastName(); ?></span>
                             </div>
 
                         </div>
