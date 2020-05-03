@@ -17,7 +17,7 @@
 		$passport_no = $row['passport_no'];
 		$sire = $row['sire'];
 		$dam = $row['dam'];
-		$owner_id = $row['owner_id'];
+		$horse_owner_id = $row['horse_owner_id'];
 		$breeder = $row['breeder'];
 		$received_from = $row['received_from'];
 		$training_status = $row['training_status'];
@@ -37,7 +37,7 @@
 		$passport_no = $_POST['passport_no'];
 		$sire = $_POST['sire'];
 		$dam = $_POST['dam'];
-		$owner_id = $_POST['horse_owner'];
+		$horse_owner_id = $_POST['horse_owner'];
 		$breeder = $_POST['breeder'];
 		$received_from = $_POST['received_from'];
 		$training_status = $_POST['training_status'];
@@ -62,7 +62,7 @@
 		$query .="passport_no = '{$passport_no}', ";
 		$query .="sire = '{$sire}', ";
 		$query .="dam = '{$dam}', ";
-		$query .="owner_id = '{$owner_id}', ";
+		$query .="horse_owner_id = '{$horse_owner_id}', ";
 		$query .="breeder = '{$breeder}', ";
 		$query .="received_from = '{$received_from}', ";
 		$query .="training_status = '{$training_status}', ";
@@ -93,7 +93,7 @@
 		<img width="100" src="../<?php echo $horse_image; ?>" alt="">
 		<!-- <input type="file" name="image"> -->
 		<div>
-			<select name="horse_category" id="horse_category">
+			<select name="horse_category" id="horse_dropdown">
 			<?php 
 
 			$query = "SELECT * FROM category";
@@ -108,7 +108,13 @@
 				$cat_id = $row['cat_id'];
 				$cat_type = $row['cat_type'];
 
-				echo "<option value='{$cat_id}'>{$cat_type}</option>";
+				if ($category_id == $cat_id) {
+					echo "<option value='{$cat_id}' selected>{$cat_type}</option>";
+				} else {
+					echo "<option value='{$cat_id}'>{$cat_type}</option>";
+				}
+
+				
 			}
 
 			?>
@@ -125,7 +131,7 @@
 	<div class="container borderBottom">
 		<h2>HORSE HISTORY</h2>
 		<div>
-			<select name="horse_owner" id="horse_category">
+			<select name="horse_owner" id="horse_dropdown">
 			<?php 
 
 			$query = "SELECT * FROM owners";
@@ -140,7 +146,11 @@
 				$owner_id = $row['owner_id'];
 				$name = $row['name'];
 
-				echo "<option value='{$owner_id}'>{$name}</option>";
+				if ($horse_owner_id == $owner_id) {
+					echo "<option value='{$owner_id}' selected>{$name}";
+				} else {
+					echo "<option value='{$owner_id}'>{$name}</option>";
+				}
 			}
 
 			?>
@@ -152,7 +162,23 @@
 
 	<div class="container">
 		<h2>HORSE HISTORY</h2>
-		<input type="text" name="training_status" placeholder="Training Status" value="<?php echo $training_status; ?>">
+		<label for="training_status">Training Status</label>
+        <select name="training_status" id="horse_dropdown">
+           <option value="In Training"><?php echo $training_status; ?></option>
+            <?php 
+            if ($training_status == 'In Training') {
+                
+                echo "<option 
+                value='Out of Training'>Out of Training</option>";
+            
+            } else {
+                
+                echo "<option value='In Training'>Out of Training</option>";
+            
+            }
+    
+            ?>
+        </select>
 		<button class="button" onclick="" name="update_horse" value="Update Horse">UPDATE HORSE</button>
 	</div>
 	

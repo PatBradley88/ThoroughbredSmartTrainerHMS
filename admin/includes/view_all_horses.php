@@ -34,7 +34,7 @@
 				$passport_no = $row['passport_no'];
 				$sire = $row['sire'];
 				$dam = $row['dam'];
-				$owner_id = $row['owner_id'];
+				$horse_owner_id = $row['horse_owner_id'];
 				$breeder = $row['breeder'];
 				$received_from = $row['received_from'];
 				$training_status = $row['training_status'];
@@ -67,7 +67,7 @@
 			echo "<td>{$sire}</td>";
 			echo "<td>{$dam}</td>";
 
-			$query = "SELECT * FROM owners WHERE owner_id = {$owner_id}";
+			$query = "SELECT * FROM owners WHERE owner_id = {$horse_owner_id}";
 			$select_owner = mysqli_query($con, $query);
 
 			if (!$select_owner) {

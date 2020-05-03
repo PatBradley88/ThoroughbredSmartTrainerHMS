@@ -15,6 +15,11 @@ if(isset($_POST['add_owner'])) {
 
 	move_uploaded_file($owner_colours_temp, "../images/ownerColours/$owner_colours");
 
+	$name = mysqli_real_escape_string($con, $_POST['name']);
+	$address1 = mysqli_real_escape_string($con, $_POST['address1']);
+	$address2 = mysqli_real_escape_string($con, $_POST['address2']);
+	$address3 = mysqli_real_escape_string($con, $_POST['address3']);
+
 	$query = "INSERT INTO owners(name, address1, address2, address3,
 								email, contactNo, owner_colours,
 								 training_status, added_date)";
@@ -52,7 +57,13 @@ if(isset($_POST['add_owner'])) {
 
 	<div class="container">
 		<h2>TRAINING STATUS</h2>
-		<input type="text" name="training_status" placeholder="Training Status" value="">
+		<!-- <input type="text" name="training_status" placeholder="Training Status" value=""> -->
+		<label for="training_status">Training Status</label>
+        <select name="training_status" id="horse_dropdown">
+           <option value="Active">Select Options</option>
+           <option value="Active">Active</option>
+           <option value="Inactive">Inactive</option>
+        </select>
 		<button class="button" onclick="" name="add_owner">ADD OWNER</button>
 	</div>
 	

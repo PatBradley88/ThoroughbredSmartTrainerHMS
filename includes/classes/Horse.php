@@ -8,7 +8,7 @@
 		private $horseName;
 		private $horseImage;
 		private $categoryId;
-		private $ownerId;
+		private $horse_owner_id;
 		private $horseColour;
 		private $horsePassport;
 		private $horseSire;
@@ -26,7 +26,7 @@
 
 			$this->horseName = $horse['horse_name'];
 			$this->categoryId = $horse['category_id'];
-			$this->ownerId = $horse['owner_id'];
+			$this->ownerId = $horse['horse_owner_id'];
 			$this->horseImage = $horse['horse_image'];
 			$this->horseColour = $horse['colour'];
 			$this->horsePassport = $horse['passport_no'];

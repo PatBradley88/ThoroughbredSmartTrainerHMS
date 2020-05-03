@@ -90,7 +90,24 @@
 
 	<div class="container">
 		<h2>TRAINING STATUS</h2>
-		<input type="text" name="training_status" placeholder="Training Status" value="<?php echo $training_status; ?>">
+		<!-- <input type="text" name="training_status" placeholder="Training Status" value="<?php echo $training_status; ?>"> -->
+		<label for="training_status">Training Status</label>
+        <select name="training_status" id="horse_dropdown">
+           <option value="Active"><?php echo $training_status; ?></option>
+            <?php 
+            if ($training_status == 'Active') {
+                
+                echo "<option 
+                value='Inactive'>Inactive</option>";
+            
+            } else {
+                
+                echo "<option value='Active'>Active</option>";
+            
+            }
+    
+            ?>
+        </select>
 		<button class="button" onclick="" value="Update Owner" name="update_owner">UPDATE OWNER</button>
 	</div>
 	

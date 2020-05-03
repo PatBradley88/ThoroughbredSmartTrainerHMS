@@ -11,7 +11,7 @@ if(isset($_POST['add_horse'])) {
 	$passport_no = $_POST['passport_no'];
 	$sire = $_POST['sire'];
 	$dam = $_POST['dam'];
-	$owner_id = $_POST['horse_owner'];
+	$horse_owner_id = $_POST['horse_owner'];
 	$breeder = $_POST['breeder'];
 	$received_from = $_POST['received_from'];
 	$training_status = $_POST['training_status'];
@@ -20,12 +20,12 @@ if(isset($_POST['add_horse'])) {
 	move_uploaded_file($horse_image_temp, "../images/$horse_image");
 
 	$query = "INSERT INTO horses(horse_name, horse_image, category_id, dateOfBirth,
-								colour, passport_no, sire, dam, owner_id, breeder,
+								colour, passport_no, sire, dam, horse_owner_id, breeder,
 								received_from, training_status, added_date)";
 
 	$query .= "VALUES('{$horse_name}', 'images/{$horse_image}', {$category_id}, 
-				'{$dateOfBirth}', '{$colour}', '{$passport_no}', '{$sire}', '{$dam}', {$owner_id},
-				'{$breeder}', '{$received_from}',
+				'{$dateOfBirth}', '{$colour}', '{$passport_no}', '{$sire}', '{$dam}', 
+				{$horse_owner_id}, '{$breeder}', '{$received_from}',
 				'{$training_status}', now())";
 
 
@@ -112,7 +112,12 @@ if(isset($_POST['add_horse'])) {
 
 	<div class="container">
 		<h2>HORSE HISTORY</h2>
-		<input type="text" name="training_status" placeholder="Training Status" value="">
+		<label for="training_status">Training Status</label>
+        <select name="training_status" id="horse_dropdown">
+           <option value="Active">Select Options</option>
+           <option value="In Training">In Training</option>
+           <option value="Out of Training">Out of Training</option>
+        </select>
 		<button class="button" onclick="" name="add_horse">ADD HORSE</button>
 	</div>
 	
