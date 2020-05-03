@@ -20,14 +20,11 @@ include("includes/includedFiles.php");
                                     . $row['horse_name'] .
                                 "</div>
                                 </span>
-
                             </div>";
                     }
-                 ?>
+                ?>
 
             </div>
-
-
 
         </div>
 
@@ -37,4 +34,3 @@ include("includes/includedFiles.php");
         
 
         </div>
-<!-- img-responsive --> 
