@@ -1,8 +1,8 @@
 <?php 
 if(isset($_POST['add_race'])) {
 	$race_horse_id = $_POST['horse_name'];
-	$country_id = $_POST['country'];
-	$racecourse_id = $_POST['racecourse'];
+	$race_country_id = $_POST['country'];
+	$race_racecourse_id = $_POST['racecourse'];
 	$race_date = $_POST['race_date'];
 	$race_no = $_POST['race_no'];
 	$race_name = $_POST['race_name'];
@@ -16,11 +16,11 @@ if(isset($_POST['add_race'])) {
 	$race_age_cat_id = mysqli_real_escape_string($con, $_POST['age_cat']);
 
 
-	$query = "INSERT INTO races(race_horse_id, country_id, racecourse_id, race_date,
+	$query = "INSERT INTO races(race_horse_id, race_country_id, race_racecourse_id, race_date,
 								race_no, race_name, race_status_id, race_distance_id, race_age_cat_id, fee,
 								declaration_date, finish_pos)";
 
-	$query .= "VALUES({$race_horse_id}, {$country_id}, {$racecourse_id}, '{$race_date}', 
+	$query .= "VALUES({$race_horse_id}, {$race_country_id}, {$race_racecourse_id}, '{$race_date}', 
 					'{$race_no}', '{$race_name}', {$race_status_id}, {$race_distance_id}, {$race_age_cat_id},
 					'{$fee}', '{$declaration_date}',
 					'{$finish_pos}')";

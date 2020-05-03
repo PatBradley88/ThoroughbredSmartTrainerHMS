@@ -26,8 +26,8 @@
 			while($row = mysqli_fetch_assoc($select_races)) {
 				$race_id = $row['race_id'];
 				$race_horse_id = $row['race_horse_id'];
-				$country_id = $row['country_id'];
-				$racecourse_id = $row['racecourse_id'];
+				$race_country_id = $row['race_country_id'];
+				$race_racecourse_id = $row['race_racecourse_id'];
 				$race_date = $row['race_date'];
 				$race_no = $row['race_no'];
 				$race_name = $row['race_name'];
@@ -56,7 +56,7 @@
 			echo "<td>{$horse_name}</td>";
 			}
 
-			$query = "SELECT * FROM racecourse_country WHERE country_id = {$country_id}";
+			$query = "SELECT * FROM racecourse_country WHERE country_id = {$race_country_id}";
 			$select_country = mysqli_query($con, $query);
 
 			if (!$select_country) {
@@ -71,7 +71,7 @@
 			echo "<td>{$country}</td>";
 			}
 
-			$query = "SELECT * FROM racecourse WHERE racecourse_id = {$racecourse_id}";
+			$query = "SELECT * FROM racecourse WHERE racecourse_id = {$race_racecourse_id}";
 			$select_racecourse = mysqli_query($con, $query);
 
 			if (!$select_racecourse) {

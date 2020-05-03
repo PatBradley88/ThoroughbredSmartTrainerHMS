@@ -27,10 +27,6 @@
 	if(isset($_POST['update_horse'])) {
 		
 		$horse_name = $_POST['horse_name'];
-
-		// $horse_image = $_FILES['image']['name'];
-		// $horse_image_temp = $_FILES['image']['tmp_name'];
-
 		$category_id = $_POST['horse_category'];
 		$dateOfBirth = $_POST['dateOfBirth'];
 		$colour = $_POST['colour'];
@@ -42,7 +38,6 @@
 		$received_from = $_POST['received_from'];
 		$training_status = $_POST['training_status'];
 
-		// move_uploaded_file($horse_image_temp, "../images/$horse_image");
 
 		if(empty($horse_image)) {
 			$query = "SELECT * FROM horses WHERE horse_id = $the_horse_id";
@@ -89,9 +84,7 @@
 	<div class="container borderBottom">
 		<h2>HORSE DETAILS</h2>
 		<input type="text" name="horse_name" placeholder="Horse Name" value="<?php echo $horse_name; ?>">
-		<!-- <input type="file" name="image" placeholder="Upload Image" value="<?php echo $horse_image; ?>"> -->
 		<img width="100" src="../<?php echo $horse_image; ?>" alt="">
-		<!-- <input type="file" name="image"> -->
 		<div>
 			<select name="horse_category" id="horse_dropdown">
 			<?php 
