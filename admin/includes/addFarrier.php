@@ -6,6 +6,10 @@ if(isset($_POST['add_farrier'])) {
 	$farrier_note_poster = $_POST['farrier_note_poster'];
 	$farrier_date = date('m.d.y');
 
+	$farrier_name = mysqli_real_escape_string($con, $_POST['farrier_name']);
+	$farrier_note = mysqli_real_escape_string($con, $_POST['farrier_note']);
+	$farrier_note_poster = mysqli_real_escape_string($con, $_POST['farrier_note_poster']);
+
 	
 
 	$query = "INSERT INTO farrier(farrier_horse_id, farrier_name, farrier_note,

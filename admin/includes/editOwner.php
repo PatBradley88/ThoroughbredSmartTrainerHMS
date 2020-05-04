@@ -29,13 +29,12 @@
 		$address3 = $_POST['address3'];
 		$email = $_POST['email'];
 		$contactNo = $_POST['contactNo'];
-
-		// $owner_colours = $_FILES['image']['name'];
-		// $owner_colours_temp = $_FILES['image']['tmp_name'];
-
 		$training_status = $_POST['training_status'];
 
-		// move_uploaded_file($owner_colours_temp, "$owner_colours");
+		$name = mysqli_real_escape_string($con, $_POST['name']);
+		$address1 = mysqli_real_escape_string($con, $_POST['address1']);
+		$address2 = mysqli_real_escape_string($con, $_POST['address2']);
+		$address3 = mysqli_real_escape_string($con, $_POST['address3']);
 
 		if(empty($owner_colours)) {
 			$query = "SELECT * FROM owners WHERE owner_id = $the_owner_id";
@@ -54,7 +53,6 @@
 		$query .="email = '{$email}', ";
 		$query .="contactNo = '{$contactNo}', ";
 		$query .="horses = '{$horses}', ";
-		// $query .="owner_colours = '{$owner_colours}', ";
 		$query .="training_status = '{$training_status}', ";
 		$query .="added_date = now() ";
 		$query .= "WHERE owner_id = {$the_owner_id} ";

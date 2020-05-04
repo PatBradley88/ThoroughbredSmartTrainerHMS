@@ -17,6 +17,11 @@ if(isset($_POST['add_horse'])) {
 	$training_status = $_POST['training_status'];
 	$added_date = date('m.d.y');
 
+	$horse_name = mysqli_real_escape_string($con, $_POST['horse_name']);
+	$sire = mysqli_real_escape_string($con, $_POST['sire']);
+	$dam = mysqli_real_escape_string($con, $_POST['dam']);
+	$breeder = mysqli_real_escape_string($con, $_POST['breeder']);
+
 	move_uploaded_file($horse_image_temp, "../images/$horse_image");
 
 	$query = "INSERT INTO horses(horse_name, horse_image, category_id, dateOfBirth,

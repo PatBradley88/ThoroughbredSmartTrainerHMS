@@ -44,9 +44,26 @@
 
 			echo "<td>{$vet_name}</td>";
 			echo "<td>{$vet_note}</td>";
-			echo "<td>{$vet_note_poster}</td>";
+
+			$query = "SELECT * FROM users WHERE id = {$vet_note_poster}";
+			$select_user = mysqli_query($con, $query);
+
+			if (!$select_user) {
+
+		      die ("Query Failed" . mysqli_error($con));
+
+		    }
+			while($row = mysqli_fetch_assoc($select_user)) {
+				$id = $row['id'];
+				$firstName = $row['firstName'];
+				$lastName = $row['lastName'];
+
+			echo "<td>{$firstName} {$lastName}</td>";
+			}
+
 			echo "<td>{$vet_date}</td>";
-			echo "<td><a href='viewVet.php?source=editVet&o_id={$vet_id}'><i class='fas fa-edit'></i></a></td>";
+
+			echo "<td><a href='viewVet.php?source=editVet&v_id={$vet_id}'><i class='fas fa-edit'></i></a></td>";
 			echo "<td><a href='viewVet.php?delete={$vet_id}'><i class='far fa-trash-alt'></i></a></td>";
 		echo "</tr>";
 		}

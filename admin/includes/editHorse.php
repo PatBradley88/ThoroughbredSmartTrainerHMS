@@ -38,6 +38,11 @@
 		$received_from = $_POST['received_from'];
 		$training_status = $_POST['training_status'];
 
+		$horse_name = mysqli_real_escape_string($con, $_POST['horse_name']);
+		$sire = mysqli_real_escape_string($con, $_POST['sire']);
+		$dam = mysqli_real_escape_string($con, $_POST['dam']);
+		$breeder = mysqli_real_escape_string($con, $_POST['breeder']);
+
 
 		if(empty($horse_image)) {
 			$query = "SELECT * FROM horses WHERE horse_id = $the_horse_id";
@@ -50,7 +55,6 @@
 
 		$query = "UPDATE horses SET ";
 		$query .="horse_name = '{$horse_name}', ";
-		// $query .="horse_image = 'images/{$horse_image}', ";
 		$query .="category_id = '{$category_id}', ";
 		$query .="dateOfBirth = '{$dateOfBirth}', ";
 		$query .="colour = '{$colour}', ";
