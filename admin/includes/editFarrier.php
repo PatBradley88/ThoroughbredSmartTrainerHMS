@@ -71,7 +71,7 @@
 				$horse_id = $row['horse_id'];
 				$horse_name = $row['horse_name'];
 
-				if ($vet_horse_id == $horse_id) {
+				if ($farrier_horse_id == $horse_id) {
 					echo "<option value='{$horse_id}' selected>{$horse_name}</option>";
 				} else {
 					echo "<option value='{$horse_id}'>{$horse_name}</option>";

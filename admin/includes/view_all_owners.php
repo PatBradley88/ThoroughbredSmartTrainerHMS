@@ -43,7 +43,14 @@
 			echo "<td>{$email}</td>";
 			echo "<td>{$contactNo}</td>";
 			echo "<td><img width='80' src='../$owner_colours' alt='image'></td>";
-			echo "<td>{$horses}</td>";
+
+
+				$query = "SELECT * FROM horses WHERE horse_owner_id = {$owner_id}";
+				$select_all_horses = mysqli_query($con, $query);
+				$horse_count = mysqli_num_rows($select_all_horses);
+				
+			echo "<td>{$horse_count}</td>";
+
 			echo "<td>{$training_status}</td>";
 			echo "<td>{$added_date}</td>";
 			echo "<td><a href='viewOwners.php?source=editOwner&o_id={$owner_id}'><i class='fas fa-edit'></i></a></td>";
