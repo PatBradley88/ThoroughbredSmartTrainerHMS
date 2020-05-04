@@ -37,9 +37,9 @@
 		$query .="vet_date = now() ";
 		$query .= "WHERE vet_id = {$the_vet_id} ";
 
-		$update_horse = mysqli_query($con, $query);
+		$update_vet = mysqli_query($con, $query);
 
-		if (!$update_horse) {
+		if (!$update_vet) {
 
 		      die ("Query Failed" . mysqli_error($con));
 

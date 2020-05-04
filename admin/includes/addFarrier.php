@@ -3,15 +3,14 @@ if(isset($_POST['add_farrier'])) {
 	$farrier_horse_id = $_POST['farrier_horse_id'];
 	$farrier_name = $_POST['farrier_name'];
 	$farrier_note = $_POST['farrier_note'];
-	$farrier_note_poster = $_POST['farrier_note_poster'];
+	$farrier_note_poster = $_POST['farrier_poster'];
 	$farrier_date = date('m.d.y');
 
 	$farrier_name = mysqli_real_escape_string($con, $_POST['farrier_name']);
 	$farrier_note = mysqli_real_escape_string($con, $_POST['farrier_note']);
-	$farrier_note_poster = mysqli_real_escape_string($con, $_POST['farrier_note_poster']);
+	$farrier_note_poster = mysqli_real_escape_string($con, $_POST['farrier_poster']);
 
 	
-
 	$query = "INSERT INTO farrier(farrier_horse_id, farrier_name, farrier_note,
 							farrier_note_poster, farrier_date)";
 
@@ -61,7 +60,30 @@ if(isset($_POST['add_farrier'])) {
 		</div>
 		<input type="text" name="farrier_name" placeholder="Farrier Name" value="">
 		<input type="text" name="farrier_note" placeholder="Duties carried out" value="">
-		<input type="text" name="farrier_note_poster" placeholder="Your name" value="">
+		<!-- <input type="text" name="farrier_note_poster" placeholder="Your name" value=""> -->
+		<div>
+			<select name="farrier_poster" id="horse_dropdown">
+			<?php 
+
+			$query = "SELECT * FROM users";
+			$select_user = mysqli_query($con, $query);
+
+			if (!$select_user) {
+
+		      die ("Query Failed" . mysqli_error($con));
+
+		    }
+			while($row = mysqli_fetch_assoc($select_user)) {
+				$id = $row['id'];
+				$firstName = $row['firstName'];
+				$lastName = $row['lastName'];
+
+				echo "<option value='{$id}'>{$firstName} {$lastName}</option>";
+			}
+
+			?>
+			</select>
+		</div>
 		<button class="button" onclick="" name="add_farrier">SUBMIT</button>
 	</div>
 	

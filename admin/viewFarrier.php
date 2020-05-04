@@ -18,12 +18,8 @@
 			include("includes/addFarrier.php");
 			break;
 
-			case 'editVet';
+			case 'editFarrier';
 			include("includes/editFarrier.php");
-			break;
-
-			case '200';
-			echo "NICE 200";
 			break;
 
 			default:

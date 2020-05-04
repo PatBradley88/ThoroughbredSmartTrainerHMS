@@ -44,9 +44,26 @@
 
 			echo "<td>{$farrier_name}</td>";
 			echo "<td>{$farrier_note}</td>";
-			echo "<td>{$farrier_note_poster}</td>";
+
+			$query = "SELECT * FROM users WHERE id = {$farrier_note_poster}";
+			$select_user = mysqli_query($con, $query);
+
+			if (!$select_user) {
+
+		      die ("Query Failed" . mysqli_error($con));
+
+		    }
+			while($row = mysqli_fetch_assoc($select_user)) {
+				$id = $row['id'];
+				$firstName = $row['firstName'];
+				$lastName = $row['lastName'];
+
+			echo "<td>{$firstName} {$lastName}</td>";
+			}
+			
 			echo "<td>{$farrier_date}</td>";
-			echo "<td><a href='viewFarrier.php?source=editFarrier&o_id={$farrier_id}'><i class='fas fa-edit'></i></a></td>";
+			
+			echo "<td><a href='viewFarrier.php?source=editFarrier&f_id={$farrier_id}'><i class='fas fa-edit'></i></a></td>";
 			echo "<td><a href='viewFarrier.php?delete={$farrier_id}'><i class='far fa-trash-alt'></i></a></td>";
 		echo "</tr>";
 		}
