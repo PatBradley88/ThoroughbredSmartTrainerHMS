@@ -90,6 +90,10 @@ nav ul .farrier-show.show4 {
     display: block;
 }
 
+nav ul .misc-show.show5 {
+    display: block;
+}
+
 nav ul ul li a {
     font-size: 12px;
     color: #a0a0a0;

@@ -53,6 +53,15 @@
                                     <li><a href="./viewFarrier.php?source=addFarrier">Add Farrier</a></li>
                                 </ul>
                             </li>
+                            <li>
+                                <a href="#" class="misc-btn"><i class="fas fa-magnet"></i> Therapy Diary
+                                    <span class="fas fa-caret-down fifth"></span>
+                                </a>
+                                <ul class="misc-show">
+                                    <li><a href="./viewMiscApps.php">Other Appointments</a></li>
+                                    <li><a href="./viewMiscApps.php?source=addMisc">Add Therapy</a></li>
+                                </ul>
+                            </li>
                             <li><a href="../settings.php"><i class="fas fa-users-cog"></i> Settings</a></li>
                         </ul>
                     </nav>
@@ -102,6 +111,11 @@
 
                         $('.farrier-btn').click(function() {
                             $('nav ul .farrier-show').toggleClass("show4");
+                            $('nav ul .fifth').toggleClass("rotate");
+                        });
+
+                        $('.misc-btn').click(function() {
+                            $('nav ul .misc-show').toggleClass("show5");
                             $('nav ul .fifth').toggleClass("rotate");
                         });
 
