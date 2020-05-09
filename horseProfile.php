@@ -326,7 +326,7 @@ $owner = $horse->getOwner();
                 echo "<td>{$farrier_name}</td>";
                 echo "<td>{$farrier_note}</td>";
 
-                $query = "SELECT * FROM users WHERE id = {$vet_note_poster}";
+                $query = "SELECT * FROM users WHERE id = {$farrier_note_poster}";
                 $select_user = mysqli_query($con, $query);
 
                 if (!$select_user) {
