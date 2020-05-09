@@ -51,6 +51,7 @@
 	
 
 	<div id="background">
+		<div id="overlay">
 		<div id="loginContainer">
 			<div id="inputContainer">
 				<form id="loginForm" action="register.php" method="POST">
@@ -130,9 +131,9 @@
 
 			<div id="loginText">
 				<img id="MHLogo" src="images/MHLogo.png">
-				<img id="SmartTrainerLogo" src="images/SmartTrainerLogo.png">
+				<img id="SmartTrainerLogo" src="images/TSTWht.png">
 			</div>
-
+		</div>
 		</div>	
 	</div>
 

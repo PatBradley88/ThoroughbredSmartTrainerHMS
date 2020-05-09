@@ -7,7 +7,7 @@ body {
 
 #background {
 	background-color: #000;
-	background-image: url(../images/MHalfordImg6.jpg);
+	background-image: url(../images/MHalfordImg4.jpg);
 	background-position: center;
 	background-size: cover;
 	display: table;
@@ -15,10 +15,19 @@ body {
 	width: 100%;
 }
 
+#overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.7);
+}
+
 #loginContainer * {
 	color: #FFF;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
-	font-weight: normal;
+	font-weight: 500;
 	line-height: 1em;
 	box-sizing: border-box;
 }
