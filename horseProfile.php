@@ -36,6 +36,10 @@ $owner = $horse->getOwner();
         <span><b>Dam:</b> <em><?php echo $horse->getDam(); ?></em></span><br><br>
     </div>
 
+    <div class="raceColours">
+        <img src="<?php echo $owner->getOwnerColours(); ?>">
+    </div>
+
 </div>
 
 <div class="horseInfoContainer borderBottom">

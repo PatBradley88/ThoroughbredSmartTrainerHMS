@@ -161,6 +161,17 @@ body {
 	width: 100%;
 }
 
+.entityInfo .raceColours {
+	width: 30%;
+	float: right;
+	max-width: 250px;
+}
+
+.entityInfo .raceColours img {
+	width: 70%;
+	border-radius: 500px;
+}
+
 .entityInfo .rightSection {
 	width: 30%;
 	float: left;
