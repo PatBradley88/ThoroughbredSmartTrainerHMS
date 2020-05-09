@@ -250,7 +250,24 @@ $owner = $horse->getOwner();
 
                 echo "<td>{$vet_name}</td>";
                 echo "<td>{$vet_note}</td>";
-                echo "<td>{$vet_note_poster}</td>";
+
+                $query = "SELECT * FROM users WHERE id = {$vet_note_poster}";
+                $select_user = mysqli_query($con, $query);
+
+                if (!$select_user) {
+
+                  die ("Query Failed" . mysqli_error($con));
+
+                }
+                while($row = mysqli_fetch_assoc($select_user)) {
+                    $id = $row['id'];
+                    $firstName = $row['firstName'];
+                    $lastName = $row['lastName'];
+
+                echo "<td>{$firstName} {$lastName}</td>";
+                }
+
+                // echo "<td>{$vet_note_poster}</td>";
                 echo "<td>{$vet_date}</td>";
             echo "</tr>";
             }
@@ -308,7 +325,23 @@ $owner = $horse->getOwner();
 
                 echo "<td>{$farrier_name}</td>";
                 echo "<td>{$farrier_note}</td>";
-                echo "<td>{$farrier_note_poster}</td>";
+
+                $query = "SELECT * FROM users WHERE id = {$vet_note_poster}";
+                $select_user = mysqli_query($con, $query);
+
+                if (!$select_user) {
+
+                  die ("Query Failed" . mysqli_error($con));
+
+                }
+                while($row = mysqli_fetch_assoc($select_user)) {
+                    $id = $row['id'];
+                    $firstName = $row['firstName'];
+                    $lastName = $row['lastName'];
+
+                echo "<td>{$firstName} {$lastName}</td>";
+                }
+                // echo "<td>{$farrier_note_poster}</td>";
                 echo "<td>{$farrier_date}</td>";
             echo "</tr>";
             }
