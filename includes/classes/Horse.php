@@ -16,6 +16,7 @@
 		private $horseBreeder;
 		private $horseDoB;
 		private $horseReceivedFrom;
+		private $horseTrainingStatus;
 
 		public function __construct($con, $id){
 			$this->con = $con;
@@ -35,6 +36,7 @@
 			$this->horseBreeder = $horse['breeder'];
 			$this->horseDoB = $horse['dateOfBirth'];
 			$this->horseReceivedFrom = $horse['received_from'];
+			$this->horseTrainingStatus = $horse['training_status'];
 			
 
 		}
@@ -81,6 +83,10 @@
 
 		public function getReceivedFrom() {
 			return $this->horseReceivedFrom;
+		}
+
+		public function getTrainingStatus() {
+			return $this->horseTrainingStatus;
 		}
 
 	}

@@ -27,28 +27,30 @@ $owner = $horse->getOwner();
     
     <div class="rightSection">
         <h2><?php echo $horse->getName(); ?></h2>
-        <span>Category: <?php echo $category->getType(); ?></span><br><br>
+        <span><b>Category:</b> <em><?php echo $category->getType(); ?></em></span><br><br>
         
-        <span>Colour: <?php echo $horse->getColour(); ?></span>
+        <span><b>Colour:</b> <em><?php echo $horse->getColour(); ?></em></span>
         <br><br>
-        <span>Sire: <?php echo $horse->getSire(); ?></span>
+        <span><b>Sire:</b> <em><?php echo $horse->getSire(); ?></em></span>
         <br><br>
-        <span>Dam: <?php echo $horse->getDam(); ?></span><br><br>
+        <span><b>Dam:</b> <em><?php echo $horse->getDam(); ?></em></span><br><br>
     </div>
 
 </div>
 
 <div class="horseInfoContainer borderBottom">
     <h2>HISTORY</h2>
-    <span>Date of Birth: <?php echo $horse->getDoB(); ?></span>
+    <span><b>Date of Birth:</b> <em><?php echo $horse->getDoB(); ?></em></span>
     <br><br>
-    <span>Passport No: <?php echo $horse->getPassport(); ?></span>
+    <span><b>Passport No:</b> <em><?php echo $horse->getPassport(); ?></em></span>
     <br><br>
-    <span>Owner: <?php echo $owner->getOwnerName(); ?></span>
+    <span><b>Owner:</b> <em><?php echo $owner->getOwnerName(); ?></em></span>
     <br><br>
-    <span>Breeder: <?php echo $horse->getBreeder(); ?></span>
+    <span><b>Breeder:</b> <em><?php echo $horse->getBreeder(); ?></em></span>
     <br><br>
-    <span>Received from: <?php echo $horse->getReceivedFrom(); ?></span><br><br>
+    <span><b>Received from:</b> <em><?php echo $horse->getReceivedFrom(); ?></em></span>
+    <br><br>
+    <span><b>Training Status:</b> <em><?php echo $horse->getTrainingStatus(); ?></em></span><br><br>
 </div>
 <br>
 
