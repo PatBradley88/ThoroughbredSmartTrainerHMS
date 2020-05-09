@@ -43,7 +43,7 @@ if(isset($_POST['add_race'])) {
 <div class="horseDetails">
 
 	<div class="container borderBottom">
-		<h2>RACE DETAILS</h2>
+		<h3>RACE DETAILS</h3>
 		<div>
 			<select name="horse_name" id="horse_dropdown">
 			<?php 
