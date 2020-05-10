@@ -56,6 +56,7 @@
 	<div class="container borderBottom">
 		<h2>VET </h2>
 		<div>
+			<label for="vet_horse_id">Name of Horse</label>
 			<select name="vet_horse_id" id="horse_dropdown">
 			<?php 
 
@@ -81,9 +82,12 @@
 			?>
 			</select>
 		</div>
+		<label for="vet_name">Vet Name</label>
 		<input type="text" name="vet_name" placeholder="Vet Name" value="<?php echo $vet_name; ?>">
+		<label for="vet_note">Vet's Note</label>
 		<input type="text" name="vet_note" placeholder="Duties carried out" value="<?php echo $vet_note; ?>">
 		<div>
+			<label for="vet_poster">Posted By</label>
 			<select name="vet_poster" id="horse_dropdown">
 			<?php 
 
