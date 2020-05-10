@@ -56,6 +56,7 @@
 	<div class="container borderBottom">
 		<h2>FARRIER </h2>
 		<div>
+			<label for="farrier_horse_id">Name of Horse</label>
 			<select name="farrier_horse_id" id="horse_dropdown">
 			<?php 
 
@@ -81,9 +82,12 @@
 			?>
 			</select>
 		</div>
+		<label for="farrier_name">Name of Farrier</label>
 		<input type="text" name="farrier_name" placeholder="Farrier Name" value="<?php echo $farrier_name; ?>">
+		<label for="farrier_note">Farrier's note</label>
 		<input type="text" name="farrier_note" placeholder="Duties carried out" value="<?php echo $farrier_note; ?>">
 		<div>
+			<label for="farrier_poster">Posted By</label>
 			<select name="farrier_poster" id="horse_dropdown">
 			<?php 
 
