@@ -87,9 +87,12 @@
 
 	<div class="container borderBottom">
 		<h2>HORSE DETAILS</h2>
+		<label for="horse_name">Horse Name</label>
 		<input type="text" name="horse_name" placeholder="Horse Name" value="<?php echo $horse_name; ?>">
 		<img width="100" src="../<?php echo $horse_image; ?>" alt="">
 		<div>
+			<br>
+			<label for="horse_category">Horse Type</label>
 			<select name="horse_category" id="horse_dropdown">
 			<?php 
 
@@ -119,15 +122,20 @@
 		</div>
 		<label for="dateOfBirth">Date of Birth</label>
 		<input type="date" name="dateOfBirth" placeholder="Date of Birth" value="<?php echo $dateOfBirth; ?>">
+		<label for="colour">Colour</label>
 		<input type="text" name="colour" placeholder="Colour" value="<?php echo $colour; ?>">
+		<label for="passport_no">Passport No.</label>
 		<input type="text" name="passport_no" placeholder="Passport No." value="<?php echo $passport_no; ?>">
+		<label for="sire">Sire</label>
 		<input type="text" name="sire" placeholder="Sire" value="<?php echo $sire; ?>">
+		<label for="dam">Dam</label>
 		<input type="text" name="dam" placeholder="Dam" value="<?php echo $dam; ?>">
 	</div>
 
 	<div class="container borderBottom">
 		<h2>HORSE HISTORY</h2>
 		<div>
+			<label for="horse_owner">Owner</label>
 			<select name="horse_owner" id="horse_dropdown">
 			<?php 
 
@@ -153,7 +161,9 @@
 			?>
 			</select>
 		</div>
+		<label for="breeder">Breeder</label>
 		<input type="text" name="breeder" placeholder="Breeder" value="<?php echo $breeder; ?>">
+		<label for="received_from">Received From</label>
 		<input type="text" name="received_from" placeholder="Received From" value="<?php echo $received_from; ?>">
 	</div>
 
