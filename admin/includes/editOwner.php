@@ -76,13 +76,19 @@
 
 	<div class="container borderBottom">
 		<h2>OWNER DETAILS</h2>
+		<label for="name">Name of Owner</label>
 		<input type="text" name="name" placeholder="Name" value="<?php echo $name; ?>">
+		<label for="address1">Address Line 1</label>
 		<input type="text" name="address1" placeholder="Address 1" value="<?php echo $address1; ?>">
+		<label for="address2">Address Line 2</label>
 		<input type="text" name="address2" placeholder="Address 2" value="<?php echo $address2; ?>">
+		<label for="address3">Address Line 3</label>
 		<input type="text" name="address3" placeholder="Address 3" value="<?php echo $address3; ?>">
+		<label for="email">Email</label>
 		<input type="email" name="email" placeholder="Email" value="<?php echo $email; ?>">
+		<label for="contactNo">Contact No.</label>
 		<input type="text" name="contactNo" placeholder="Contact no." value="<?php echo $contactNo; ?>">
-		<img width="100" src="../<?php echo $owner_colours; ?>" alt="">
+		<img width="100" src="../<?php echo $owner_colours; ?>" alt="" style="border-radius: 500px">
 		<!-- <input type="file" name="image"> -->
 	</div>
 
