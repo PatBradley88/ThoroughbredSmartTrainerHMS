@@ -75,7 +75,11 @@
 				$horse_id = $row['horse_id'];
 				$horse_name = $row['horse_name'];
 
-				echo "<option value='{$horse_id}'>{$horse_name}</option>";
+				if ($misc_horse_id == $horse_id) {
+					echo "<option value='{$horse_id}' selected>{$horse_name}</option>";
+				} else {
+					echo "<option value='{$horse_id}'>{$horse_name}</option>";
+				}
 			}
 
 			?>
@@ -98,7 +102,11 @@
 				$appoint_id = $row['appoint_id'];
 				$appoint_type = $row['appoint_type'];
 
-				echo "<option value='{$appoint_id}'>{$appoint_type}</option>";
+				if ($misc_horse_id == $horse_id) {
+					echo "<option value='{$appoint_id}' selected>{$appoint_type}</option>";
+				} else {
+					echo "<option value='{$appoint_id}'>{$appoint_type}</option>";
+				}
 			}
 
 			?>
@@ -127,7 +135,11 @@
 				$firstName = $row['firstName'];
 				$lastName = $row['lastName'];
 
-				echo "<option value='{$id}'>{$firstName} {$lastName}</option>";
+				if ($misc_horse_id == $horse_id) {
+					echo "<option value='{$id}' selected>{$firstName} {$lastName}</option>";
+				} else {
+					echo "<option value='{$id}'>{$firstName} {$lastName}</option>";
+				}
 			}
 
 			?>
