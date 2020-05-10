@@ -27,13 +27,13 @@ $owner = $horse->getOwner();
     
     <div class="rightSection">
         <h2><?php echo $horse->getName(); ?></h2>
-        <span><b>Category:</b> <em><?php echo $category->getType(); ?></em></span><br><br>
+        <span><label>Category:</label> <em><?php echo $category->getType(); ?></em></span><br><br>
         
-        <span><b>Colour:</b> <em><?php echo $horse->getColour(); ?></em></span>
+        <span><label>Colour:</label> <em><?php echo $horse->getColour(); ?></em></span>
         <br><br>
-        <span><b>Sire:</b> <em><?php echo $horse->getSire(); ?></em></span>
+        <span><label>Sire:</label> <em><?php echo $horse->getSire(); ?></em></span>
         <br><br>
-        <span><b>Dam:</b> <em><?php echo $horse->getDam(); ?></em></span><br><br>
+        <span><label>Dam:</label> <em><?php echo $horse->getDam(); ?></em></span><br><br>
     </div>
 
     <div class="raceColours">
@@ -44,17 +44,17 @@ $owner = $horse->getOwner();
 
 <div class="horseInfoContainer borderBottom">
     <h2>HISTORY</h2>
-    <span><b>Date of Birth:</b> <em><?php echo $horse->getDoB(); ?></em></span>
+    <span><label>Date of Birth:</label> <em><?php echo $horse->getDoB(); ?></em></span>
     <br><br>
-    <span><b>Passport No:</b> <em><?php echo $horse->getPassport(); ?></em></span>
+    <span><label>Passport No:</label> <em><?php echo $horse->getPassport(); ?></em></span>
     <br><br>
-    <span><b>Owner:</b> <em><?php echo $owner->getOwnerName(); ?></em></span>
+    <span><label>Owner:</label> <em><?php echo $owner->getOwnerName(); ?></em></span>
     <br><br>
-    <span><b>Breeder:</b> <em><?php echo $horse->getBreeder(); ?></em></span>
+    <span><label>Breeder:</label> <em><?php echo $horse->getBreeder(); ?></em></span>
     <br><br>
-    <span><b>Received from:</b> <em><?php echo $horse->getReceivedFrom(); ?></em></span>
+    <span><label>Received from:</label> <em><?php echo $horse->getReceivedFrom(); ?></em></span>
     <br><br>
-    <span><b>Training Status:</b> <em><?php echo $horse->getTrainingStatus(); ?></em></span><br><br>
+    <span><label>Training Status:</label> <em><?php echo $horse->getTrainingStatus(); ?></em></span><br><br>
 </div>
 <br>
 
