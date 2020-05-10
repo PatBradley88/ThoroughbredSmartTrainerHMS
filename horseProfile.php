@@ -22,7 +22,7 @@ $owner = $horse->getOwner();
 
 
     <div class="leftSection">
-        <img src="<?php echo $horse->getHorseImage(); ?>">
+        <img src="<?php echo $horse->getHorseImage(); ?>" >
     </div>
     
     <div class="rightSection">
@@ -37,7 +37,7 @@ $owner = $horse->getOwner();
     </div>
 
     <div class="raceColours">
-        <img src="<?php echo $owner->getOwnerColours(); ?>">
+            <img src="<?php echo $owner->getOwnerColours(); ?>">
     </div>
 
 </div>
