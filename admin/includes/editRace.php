@@ -76,6 +76,7 @@
 	<div class="container borderBottom">
 		<h2>RACE DETAILS</h2>
 		<div>
+			<label for="horse_name">Name of Horse</label>
 			<select name="horse_name" id="horse_dropdown">
 			<?php 
 
@@ -102,6 +103,7 @@
 			</select>
 		</div>
 		<div>
+			<label for="country">Country</label>
 			<select name="country" id="horse_dropdown">
 			<?php 
 
@@ -128,6 +130,7 @@
 			</select>
 		</div>
 		<div>
+			<label for="">Racecourse</label>
 			<select name="racecourse" id="horse_dropdown">
 			<?php 
 
@@ -157,6 +160,7 @@
 		<input type="date" name="race_date" placeholder="Date of Race" value="<?php echo $race_date; ?>">
 		<label for="number">Race Number</label>
 		<input type="number" name="race_no" placeholder="Race Number" value="<?php echo $race_no; ?>">
+		<label for="race_name">Name of the Race</label>
 		<input type="text" name="race_name" placeholder="Name of Race" value="<?php echo $race_name; ?>">
 		<div>
 			<label for="status">Race Status</label>
@@ -239,6 +243,7 @@
 			?>
 			</select>
 		</div>
+		<label for="fee">Race Entry Fee</label>
 		<input type="text" name="fee" placeholder="Entry Fee" value="<?php echo $fee; ?>">
 		<label for="declaration_date">Declaration Date</label>
 		<input type="date" name="declaration_date" placeholder="Declaration Date" value="<?php echo $declaration_date; ?>">
