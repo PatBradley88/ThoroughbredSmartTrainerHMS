@@ -371,8 +371,6 @@ $owner = $horse->getOwner();
             <th>Note</th>
             <th>Posted By</th>
             <th>Date Added</th>
-            <th>Edit</th>
-            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
